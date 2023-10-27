@@ -1,0 +1,16 @@
+/* LanguageButton.css */
+
+.language-button {
+    background-color: #FFFFFF; /* White background color */
+    border: 2px solid #333333; /* Dark border */
+    border-radius: 50%; /* Making it circular */
+    color: #333333; /* Dark text color */
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
