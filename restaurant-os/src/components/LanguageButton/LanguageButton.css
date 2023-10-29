@@ -1,0 +1,9 @@
+.lang-button {
+    z-index: 1;
+    position: absolute;   /* Position the box at the bottom of its parent container */
+    bottom: 8vh;          /* Position it 8vh from the bottom of the parent container */
+    left: 50%;            /* Center the box horizontally within its parent container */
+    transform: translateX(-50%);  /* Shifts the box back by half its width to truly center it */
+    padding: 10px;        /* Adds some padding around the content inside the box */
+    /* Other styles you want to keep */
+}

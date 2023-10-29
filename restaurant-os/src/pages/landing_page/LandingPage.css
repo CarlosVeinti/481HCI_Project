@@ -9,6 +9,7 @@
     height: 100vh; /* Occupy full viewport height */
     padding: 20px;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 /* This is to give spacing between components */
@@ -16,13 +17,17 @@
     margin-bottom: 20px;
 }
 
-/* Optional: You can give the LandingPage a background image if you have one */
-/*
-.landing-page {
-    background-image: url('path_to_your_image.jpg');
+.cover-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    z-index: 0;
+    opacity: 0.8;
 }
-*/
+
+.cover-title {
+    color: #000;
+    z-index: 1;
+}
 

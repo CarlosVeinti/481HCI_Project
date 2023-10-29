@@ -1,0 +1,11 @@
+.welcome-section {
+    position: absolute;
+    top: 50%;             /* Positions the box at the middle vertically */
+    left: 50%;            /* Positions the box at the middle horizontally */
+    transform: translate(-50%, -50%);  /* Shifts the box back by half its width and height to truly center it */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    height: 15vh;
+}
