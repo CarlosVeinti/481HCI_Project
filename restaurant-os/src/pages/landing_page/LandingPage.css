@@ -26,8 +26,12 @@
     opacity: 0.8;
 }
 
-.cover-title {
-    color: #000;
+.logo {
     z-index: 1;
+    position: fixed;   /* Keeps the box fixed at the bottom */
+    top: 0;         /* Positions the box at the bottom of the screen */
+    left: 50%;         /* Start the box at the middle of the screen */
+    transform: translateX(-50%);
+    height: 20vh;
 }
 

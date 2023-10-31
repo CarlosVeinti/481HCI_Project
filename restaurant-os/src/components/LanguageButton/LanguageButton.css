@@ -7,3 +7,7 @@
     padding: 10px;        /* Adds some padding around the content inside the box */
     /* Other styles you want to keep */
 }
+
+.custom-button {
+    font-size: 1.5rem;
+};

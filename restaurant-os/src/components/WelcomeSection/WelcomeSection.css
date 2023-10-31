@@ -4,8 +4,23 @@
     left: 50%;            /* Positions the box at the middle horizontally */
     transform: translate(-50%, -50%);  /* Shifts the box back by half its width and height to truly center it */
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(78, 78, 78, 0.9);
     padding: 10px;
     border-radius: 8px;
-    height: 15vh;
+    height: 40vh;
+    width: 50vh;
+}
+
+h2 {
+    font-family: 'Playpen Sans', sans-serif; /* Replace 'YourGoogleFont' with your chosen Google Font */
+    font-size: 4rem; /* Adjust the font size as needed */
+    font-weight: bold; /* You can adjust the font weight as well */
+    color: rgba(230, 230, 230, 0.9);
+    margin-top: 40px;
+}
+
+p {
+    font-family: 'Playpen Sans', sans-serif;
+    color: rgba(230, 230, 230, 0.9);
+    font-size: 1.5rem;
 }

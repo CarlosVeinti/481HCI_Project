@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 function MenuButton() {
     return (
         <div className='menu-button'>
-        <Button variant="danger">Menu</Button>
+            <Button variant="danger" className="custom-button">Menu</Button>
         </div>
     );
 }

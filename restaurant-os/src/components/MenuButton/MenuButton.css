@@ -5,5 +5,9 @@
     left: 50%;         /* Start the box at the middle of the screen */
     transform: translateX(-50%);  /* Shifts the box back by half its width to truly center it */
     padding: 10px;     /* Adds some padding around the content inside the box */
-    /* Other styles you want to keep */
+    margin-bottom: 70px;
 }
+
+.custom-button {
+    font-size: 1.5rem;
+};
