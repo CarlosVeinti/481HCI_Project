@@ -28,7 +28,7 @@ function NavigationHeader() {
                 <Button variant="primary" style={circleButtonStyle}>Back</Button>
                 <Button variant="primary" style={circleButtonStyle}>Request Bill</Button>
                 <Navbar.Brand>
-                    <span style={brandStyle}>Sushi-Ya</span>
+                    <span style={brandStyle}>Zen Umi</span>
                 </Navbar.Brand>
                 <Button variant="primary" style={circleButtonStyle}>Back</Button>
                 <Button variant="primary" style={circleButtonStyle}>Request Bill</Button>
