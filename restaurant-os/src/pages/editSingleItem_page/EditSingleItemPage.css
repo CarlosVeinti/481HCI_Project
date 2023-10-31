@@ -1,0 +1,11 @@
+.nav_Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF; /* White background color */
+    font-family: 'Arial', sans-serif; /* Sample font; you can replace this with any font of your choice */
+    height: 100vh; /* Occupy full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}

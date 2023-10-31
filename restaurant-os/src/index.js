@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import LandingPage from './pages/landing_page/LandingPage';
+
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// All the Customer Pages
+import LandingPage from './pages/landing_page/LandingPage';
 import CategoriesPage from './pages/categories_page/CategoriesPage';
+import BrowseItemsPage from './pages/browseItems_page/BrowseItemsPage';
+import SingleItemPage from './pages/singleItem_page/SingleItemPage';
+import EditSingleItemPage from './pages/editSingleItem_page/EditSingleItemPage';
+import CartPage from './pages/cart_page/CartPage'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+
 root.render(
   <React.StrictMode>
-    <CategoriesPage />
+    <BrowseItemsPage />
   </React.StrictMode>
 );
 
