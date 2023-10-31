@@ -12,7 +12,7 @@ const circleButtonStyle = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '0 40px',
+    margin: '0 110px',
   };
 
 const brandStyle = {
