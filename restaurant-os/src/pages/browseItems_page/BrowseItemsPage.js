@@ -4,7 +4,7 @@ import WelcomeSection from '../../components/WelcomeSection/WelcomeSection';
 import LanguageButton from '../../components/LanguageButton/LanguageButton';
 import CategoriesButtons from '../../components/CategoriesButtons/CategoriesButtons';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
-
+import CategoriesSideBar from '../../components/CategoriesSideBar/CategoriesSideBar';
 import './BrowseItemsPage.css'
 
 const customBackgroundStyle = {
@@ -14,8 +14,11 @@ const customBackgroundStyle = {
 function BrowseItemsPage() {
     return (
         <>
-        <div className="nav_Header" style={customBackgroundStyle}>
+        <div className="browseItemsClass" style={customBackgroundStyle}>
             <NavigationHeader/>
+        </div>
+        <div>
+            <CategoriesSideBar/>
         </div>
         </>
     );

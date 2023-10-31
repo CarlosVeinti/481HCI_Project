@@ -4,7 +4,7 @@ import { Navbar } from 'react-bootstrap';
 
 const circleButtonStyle = {
     backgroundColor: '#719579', // Replace with your desired color
-    color: 'black',
+    color: '#fff5ee',
     border: '2px solid #8D6E63',
     width: '75px',  // Adjust the width and height as needed for your design
     height: '75px',
@@ -31,7 +31,7 @@ function NavigationHeader() {
                     <span style={brandStyle}>Sushi-Ya</span>
                 </Navbar.Brand>
                 <Button variant="primary" style={circleButtonStyle}>Back</Button>
-                <Button variant="primary" style={circleButtonStyle}>Request Bill</Button>
+                <Button variant="primary" style={circleButtonStyle}>View</Button>
             </Navbar>
         </div>
     );
