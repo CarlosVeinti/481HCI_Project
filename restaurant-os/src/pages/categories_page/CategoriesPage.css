@@ -9,3 +9,21 @@
     box-sizing: border-box;
     z-index: 1;
 }
+
+.my-row {
+    margin-bottom: 50px;  /* Reducing vertical spacing between rows */
+    margin-top: 40px;
+}
+
+.my-col {
+    padding: 0 30px;  /* Adding horizontal spacing between columns */
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    z-index: 0;
+    opacity: 0.6;
+}

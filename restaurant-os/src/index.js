@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import App from './App'
 // All the Customer Pages
 import LandingPage from './pages/landing_page/LandingPage';
 import CategoriesPage from './pages/categories_page/CategoriesPage';
@@ -12,14 +12,39 @@ import BrowseItemsPage from './pages/browseItems_page/BrowseItemsPage';
 import SingleItemPage from './pages/singleItem_page/SingleItemPage';
 import EditSingleItemPage from './pages/editSingleItem_page/EditSingleItemPage';
 import CartPage from './pages/cart_page/CartPage'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/categories",
+    element: <CategoriesPage/>,
+  },
+  {
+    path: "/",
+    element: <LandingPage />,
+
+  },
+  {
+    path: "/browse-items",
+    element: <BrowseItemsPage />,
+
+  },
+  {
+    path: "/edit-single-items",
+    element: <EditSingleItemPage />,
+
+  },
+]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
-
 root.render(
   <React.StrictMode>
-    <LandingPage />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
