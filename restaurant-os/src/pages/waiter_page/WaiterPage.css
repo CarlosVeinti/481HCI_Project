@@ -9,9 +9,9 @@
 /* Style for the order preview container */
 .order-preview {
     width: 300px;
-    height: 300px;
+    max-height: 400px; /* Set a maximum height to create a scrollable container */
     border: 1px solid #ccc;
-    overflow-y: scroll;
+    overflow-y: scroll; /* Add a vertical scroll bar when content exceeds the max height */
 }
 
 /* Style for each item in the list */
@@ -29,4 +29,14 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+/* Add a bottom border to separate each item */
+.order-preview tr {
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.order-preview td {
+    border-right: 1px solid #ccc;
 }

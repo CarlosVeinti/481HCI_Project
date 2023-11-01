@@ -13,6 +13,7 @@ import SingleItemPage from './pages/singleItem_page/SingleItemPage';
 import EditSingleItemPage from './pages/editSingleItem_page/EditSingleItemPage';
 import CartPage from './pages/cart_page/CartPage'
 import WaiterPage from './pages/waiter_page/WaiterPage'
+
 import {
   createBrowserRouter,
   RouterProvider,
