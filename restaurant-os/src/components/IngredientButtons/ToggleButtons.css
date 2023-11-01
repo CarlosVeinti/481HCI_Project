@@ -4,7 +4,7 @@
 }
 
 /* Individual Button Styling */
-ToggleButton, .btn {
+ToggleButton {
     border-radius: 30px;        /* Rounded corners */
     border: 3px solid #333;     /* Thicker border for the buttons */
     padding: 12px 24px;         /* Increase padding for buttons */
@@ -14,21 +14,15 @@ ToggleButton, .btn {
 }
 
 /* Hover effect for buttons */
-ToggleButton:hover, .btn:hover {
+ToggleButton:hover {
     background-color: #555;     /* Change color on hover */
     color: #fff;                /* Change text color on hover */
     transform: scale(1.05);     /* Slight scaling on hover */
 }
 
 /* Active state styling for toggle buttons */
-ToggleButton:checked, .btn.active {
+ToggleButton:checked {
     background-color: #007bff;  /* Change background when button is active */
     color: #fff;                /* Change text color when button is active */
     border-color: #0056b3;      /* Adjust border color for active state */
-}
-
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

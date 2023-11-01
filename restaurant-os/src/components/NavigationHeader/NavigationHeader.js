@@ -1,40 +1,39 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import { Navbar } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import './NavigationHeader.css';
 
-const circleButtonStyle = {
-    backgroundColor: '#719579', // Replace with your desired color
-    color: '#fff5ee',
-    border: '2px solid #8D6E63',
-    width: '75px',  // Adjust the width and height as needed for your design
-    height: '75px',
-    borderRadius: '50%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: '0 110px',
-  };
-
-const brandStyle = {
-    border: '2px solid #8D6E63', // Border around the text
-    borderRadius: '10%', // Make the border round
-    padding: '5px', // Padding to separate the border from text
-};
-
-function NavigationHeader() {
-    return (
-        <div className='navHeader'>
-            <Navbar>
-                <Button variant="primary" style={circleButtonStyle}>Back</Button>
-                <Button variant="primary" style={circleButtonStyle}>Request Bill</Button>
-                <Navbar.Brand>
-                    <span style={brandStyle}>Sushi-Ya</span>
-                </Navbar.Brand>
-                <Button variant="primary" style={circleButtonStyle}>Back</Button>
-                <Button variant="primary" style={circleButtonStyle}>View</Button>
-            </Navbar>
-        </div>
-    );
+function OffcanvasExample() {
+  return (
+    <>
+      <Navbar expand={false} className="bg-body-tertiary mb-3">
+        <Container fluid>
+          <Navbar.Toggle aria-controls="offcanvasNavbar-expand" />
+          <Navbar.Offcanvas
+            id="offcanvasNavbar-expand"
+            aria-labelledby="offcanvasNavbarLabel-expand"
+            placement="end"
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id="offcanvasNavbarLabel-expand">
+                Zen Umi
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link href="#action1">Request Bill</Nav.Link>
+                <Nav.Link href="#action2">View Order</Nav.Link>
+              </Nav>
+              <div className="mt-3 text-center">
+                <img src='/logo.png' alt="Your Logo" style={{ width: '200px', height: 'auto' }} />
+             </div>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+    </>
+  );
 }
 
-export default NavigationHeader;
+export default OffcanvasExample;
