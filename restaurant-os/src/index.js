@@ -37,6 +37,10 @@ const router = createBrowserRouter([
     element: <EditSingleItemPage />,
 
   },
+  {
+    path: "/cart",
+    element: <CartPage />,
+  }
 ]);
 
 
