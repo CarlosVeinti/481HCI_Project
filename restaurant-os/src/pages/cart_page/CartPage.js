@@ -15,7 +15,9 @@ function CartPage() {
             <span>Quantity: 1</span>
             <button className="btn btn-outline-secondary">+</button>
             </div>
-            <span>$16.00 each</span>
+            <div className="edits">
+            <span>Edits: Remove pork</span>
+            </div>
             <span>Total: $16.00</span>
             </div>
 
@@ -26,10 +28,125 @@ function CartPage() {
             <span>Quantity: 2</span>
             <button className="btn btn-outline-secondary">+</button>
             </div>
-            <span>$10.00 each</span>
             <span>Total: $20.00</span>
             </div>
-            {/* Your cart items will go here */}
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
+            <div className="cart-item">
+            <span>California Roll</span>
+            <div className="quantity-container">
+            <button className="btn btn-outline-secondary">-</button>
+            <span>Quantity: 2</span>
+            <button className="btn btn-outline-secondary">+</button>
+            </div>
+            <span>Total: $20.00</span>
+            </div>
           </div>
           <div className="cart-summary">
             <p>Total: $36.00</p>

@@ -46,11 +46,12 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 /* Took this out as I want to render Individual pages atm.
-<RouterProvider router={router} />
 */
+<RouterProvider router={router} />
+
 root.render(
   <React.StrictMode>
-    <BrowseItemsPage/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
