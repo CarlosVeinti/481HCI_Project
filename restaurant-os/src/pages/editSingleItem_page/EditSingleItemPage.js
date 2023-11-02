@@ -2,10 +2,6 @@ import React from 'react';
 import IngredientButtonGroup from '../../components/IngredientButtons/ToggleButton'
 import ServingCounter from '../../components/IngredientButtons/ServingButton'
 import './EditSingleItemPage.css';
-
-import WelcomeSection from '../../components/WelcomeSection/WelcomeSection';
-import LanguageButton from '../../components/LanguageButton/LanguageButton';
-import CategoriesButtons from '../../components/CategoriesButtons/CategoriesButtons';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 
 const customBackgroundStyle = {
@@ -14,6 +10,10 @@ const customBackgroundStyle = {
 
 function EditSingleItemPage() {
     return (
+        <div>
+        <div>
+          <img src="/background.png" alt="Background Image" className='cover-image'></img>
+        </div>
         <div className="nav_Header" style={customBackgroundStyle}>
             <NavigationHeader/>
 
@@ -67,6 +67,7 @@ function EditSingleItemPage() {
                 <button className="add-to-cart-btn">Add to Cart</button>
             </div>
         </div>
+    </div>
     </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoryCard from '../../components/CategoryCard/CategoryCard';
-import CategoriesButtons from '../../components/CategoriesButtons/CategoriesButtons';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
+import BackButton from '../../components/BackButton/BackButton';
 import './CategoriesPage.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -15,9 +15,10 @@ function CategoriesPage() {
     return (
       <>
         <div>
-        <img src="/background.png" alt="Background Image" className='cover-image'></img>
+          <img src="/background.png" alt="Background Image" className='cover-image'></img>
         </div>
-        <div className="nav_Header" style={customBackgroundStyle}>
+        <BackButton />
+        <div className="nav_Header">
           <NavigationHeader />
           <Container>
             <Row className="my-row">

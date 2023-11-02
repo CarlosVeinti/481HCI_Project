@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import CategoriesSideBar from '../../components/CategoriesSideBar/CategoriesSideBar';
+import BackButton from '../../components/BackButton/BackButton';
 import ItemCard from '../../components/ItemCard/ItemCard';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -18,6 +19,7 @@ function BrowseItemsPage() {
         <div>
             <img src="/background.png" alt="Background Image" className='cover-image'></img>
         </div>
+        <BackButton />
         <div className="browseItemsClass">
             <NavigationHeader/>            
             <Row>

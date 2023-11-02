@@ -8,7 +8,8 @@
     /* Other styles you want to keep */
 }
 
-.custom-button {
+.language-button {
     font-size: 2.5rem;
     padding: 24px;
+    background-color: orange;
 };
