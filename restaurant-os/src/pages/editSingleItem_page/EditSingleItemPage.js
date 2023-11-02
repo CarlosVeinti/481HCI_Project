@@ -3,6 +3,7 @@ import IngredientButtonGroup from '../../components/IngredientButtons/ToggleButt
 import ServingCounter from '../../components/IngredientButtons/ServingButton'
 import './EditSingleItemPage.css';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
+import BackButton from '../../components/BackButton/BackButton';
 
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee', // Replace with your desired background color
@@ -12,8 +13,9 @@ function EditSingleItemPage() {
     return (
         <div>
         <div>
-          <img src="/background.png" alt="Background Image" className='cover-image'></img>
+          <img src="/noodles.jpeg" alt="Background Image" className='cover-image-single'></img>
         </div>
+        <BackButton />
         <div className="nav_Header" style={customBackgroundStyle}>
             <NavigationHeader/>
 
