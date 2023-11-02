@@ -24,7 +24,7 @@ function CartPage() {
                     <span>1</span>
                     <button className="btn btn-outline-secondary">+</button>
                 </div>
-            <span className="item-price">$16.00</span>
+            <span className="cart-item-price">$16.00</span>
             <button className="btn btn-link remove-button">
             <FaTrash />
             </button>
@@ -44,7 +44,7 @@ function CartPage() {
                     <span>1</span>
                     <button className="btn btn-outline-secondary">+</button>
                 </div>
-            <span className="item-price">$10.00</span>
+            <span className="cart-item-price">$10.00</span>
             <button className="btn btn-link remove-button">
             <FaTrash />
             </button>
@@ -64,7 +64,7 @@ function CartPage() {
                     <span>1</span>
                     <button className="btn btn-outline-secondary">+</button>
                 </div>
-            <span className="item-price">$11.00</span>
+            <span className="cart-item-price">$11.00</span>
             <button className="btn btn-link remove-button">
             <FaTrash />
             </button>
@@ -84,7 +84,7 @@ function CartPage() {
                     <span>2</span>
                     <button className="btn btn-outline-secondary">+</button>
                 </div>
-            <span className="item-price">$12.00</span>
+            <span className="cart-item-price">$12.00</span>
             <button className="btn btn-link remove-button">
             <FaTrash />
             </button>
@@ -104,7 +104,7 @@ function CartPage() {
                     <span>1</span>
                     <button className="btn btn-outline-secondary">+</button>
                 </div>
-            <span className="item-price">$6.00</span>
+            <span className="cart-item-price">$6.00</span>
             <button className="btn btn-link remove-button">
             <FaTrash />
             </button>
@@ -124,7 +124,7 @@ function CartPage() {
                     <span>1</span>
                     <button className="btn btn-outline-secondary">+</button>
                 </div>
-            <span className="item-price">$12.00</span>
+            <span className="cart-item-price">$12.00</span>
             <button className="btn btn-link remove-button">
             <FaTrash />
             </button>
@@ -144,7 +144,7 @@ function CartPage() {
                     <span>1</span>
                     <button className="btn btn-outline-secondary">+</button>
                 </div>
-            <span className="item-price">$14.00</span>
+            <span className="cart-item-price">$14.00</span>
             <button className="btn btn-link remove-button">
             <FaTrash />
             </button>
@@ -164,7 +164,7 @@ function CartPage() {
                     <span>1</span>
                     <button className="btn btn-outline-secondary">+</button>
                 </div>
-            <span className="item-price">$6.00</span>
+            <span className="cart-item-price">$6.00</span>
             <button className="btn btn-link remove-button">
             <FaTrash />
             </button>
