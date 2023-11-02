@@ -13,6 +13,7 @@ import EditSingleItemPage from './pages/editSingleItem_page/EditSingleItemPage';
 import CartPage from './pages/cart_page/CartPage'
 import WaiterPage from './pages/waiter_page/WaiterPage'
 import TablePage from './pages/Table_page/TablePage'
+import HistoryPage from './pages/history_page/HistoryPage'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/table",
     element: <TablePage/>,
+  },
+  {
+    path: "/history",
+    element: <HistoryPage/>,
   }
 ]);
 

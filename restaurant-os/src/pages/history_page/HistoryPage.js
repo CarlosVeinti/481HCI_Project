@@ -1,11 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 
-import WelcomeSection from '../../components/WelcomeSection/WelcomeSection';
-import LanguageButton from '../../components/LanguageButton/LanguageButton';
-import CategoriesButtons from '../../components/CategoriesButtons/CategoriesButtons';
-import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
-import './WaiterPage.css';
+import './HistoryPage.css';
 
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee', 
@@ -23,25 +19,11 @@ function TopLeftButton() {
 
     return (
         <div style={buttonStyle}>
-            <Button variant="primary">Table</Button>
+            <Button variant="primary">Active Orders</Button>
         </div>
     );
 }
 
-function TopRightButton() {
-    const buttonStyle = {
-        position: 'absolute',
-        top: '10px',
-        right: '10px',
-    };
-
-    return (
-        <div style={buttonStyle}>
-            <Button variant="primary">Order History</Button>
-            
-        </div>
-    );
-}
 
 function WaiterPage() {
     const customBackgroundStyle = {
@@ -84,24 +66,22 @@ function WaiterPage() {
         console.log(`Item clicked: ${item}`);
     };
 
-    return (
-        <div className="parent" style={customBackgroundStyle}>
-
-        <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center' }}>Active Orders</h1>
-
-        <div className="centered-container" style={customBackgroundStyle}>
+    return (        
+    <div className="parent" style={customBackgroundStyle}>
         <TopLeftButton />
-        <TopRightButton />
+        <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center' }}>Order History</h1>
+        <div className="centered-container" style={customBackgroundStyle}>
 
             <div className="order-container" style={{ maxHeight: '500px', overflowY: 'auto' }}>
+                
                 <table className="order-preview" style={{ ...customBackgroundStyle2, width: '100%' }}>
+                
                     <thead>
                         <tr>
                             <th style={{ width: '10%' }}>Number</th>
                             <th style={{ width: '1000px' }}>Item</th>
                             <th style={{ width: '10%' }}>Quantity</th>
                             <th style={{ width: '30%' }}>Date</th>
-                            <th style={{ width: '5%' }}>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -121,16 +101,14 @@ function WaiterPage() {
                                 </td>
                                 <td>{order.quantity}</td>
                                 <td>{order.date}</td>
-                                <td>
-                                    <button className="cancel-button">Cancel</button>
-                                </td>
+
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>    
+        </div>
     );
 }
 export default WaiterPage;

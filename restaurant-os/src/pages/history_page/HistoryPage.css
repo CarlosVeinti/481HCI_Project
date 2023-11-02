@@ -1,0 +1,34 @@
+/* Centered container */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% viewport height */
+}
+
+/* Style for the order preview container */
+.order-preview {
+    width: 300px;
+    max-height: 400px; /* Set a maximum height to create a scrollable container */
+    border: 1px solid #ccc;
+    overflow-y: scroll; /* Add a vertical scroll bar when content exceeds the max height */
+}
+
+/* Style for each item in the list */
+.order-item {
+    padding: 10px;
+    border-bottom: 1px solid #6e0b0b;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Add a bottom border to separate each item */
+.order-preview tr {
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.order-preview td {
+    border-right: 1px solid #ccc;
+}
+
