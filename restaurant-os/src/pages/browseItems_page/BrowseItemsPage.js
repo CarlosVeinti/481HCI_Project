@@ -49,7 +49,7 @@ function BrowseItemsPage() {
                         <ItemCard title="Salad Rolls" description="Salad Rolls serving" imageSrc="/Appetizers/SaladRolls.webp"/>
                     </Col>
                     <Col className="my-col">
-                        <ItemCard title="Okonomiyaki" description="savory dish" imageSrc="/Appetizers/Okonomiyaki.jpg"  />
+                        <ItemCard title="Okonomiyaki" description="Savory Japanese Pancake" imageSrc="/Appetizers/Okonomiyaki.jpg"  />
                     </Col>
                 </Row>
             </Container>
