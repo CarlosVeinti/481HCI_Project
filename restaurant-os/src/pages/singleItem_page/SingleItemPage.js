@@ -1,8 +1,4 @@
 import React from 'react';
-
-import WelcomeSection from '../../components/WelcomeSection/WelcomeSection';
-import LanguageButton from '../../components/LanguageButton/LanguageButton';
-import CategoriesButtons from '../../components/CategoriesButtons/CategoriesButtons';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 
 const customBackgroundStyle = {
@@ -12,6 +8,9 @@ const customBackgroundStyle = {
 function SingleItemPage() {
     return (
         <>
+        <div>
+            <img src="/background.png" alt="Background Image" className='cover-image'></img>
+        </div>
         <div className="nav_Header" style={customBackgroundStyle}>
             <NavigationHeader/>
         </div>

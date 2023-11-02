@@ -9,7 +9,6 @@ import App from './App'
 import LandingPage from './pages/landing_page/LandingPage';
 import CategoriesPage from './pages/categories_page/CategoriesPage';
 import BrowseItemsPage from './pages/browseItems_page/BrowseItemsPage';
-import SingleItemPage from './pages/singleItem_page/SingleItemPage';
 import EditSingleItemPage from './pages/editSingleItem_page/EditSingleItemPage';
 import CartPage from './pages/cart_page/CartPage'
 import WaiterPage from './pages/waiter_page/WaiterPage'

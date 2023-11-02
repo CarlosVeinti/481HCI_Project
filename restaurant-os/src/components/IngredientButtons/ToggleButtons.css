@@ -1,0 +1,28 @@
+/* Button Group Styling */
+.mb-2 {
+    margin-bottom: 15px !important; /* Increase spacing between button groups */
+}
+
+/* Individual Button Styling */
+ToggleButton {
+    border-radius: 30px;        /* Rounded corners */
+    border: 3px solid #333;     /* Thicker border for the buttons */
+    padding: 12px 24px;         /* Increase padding for buttons */
+    font-size: 18px;            /* Increase font size */
+    transition: all 0.3s;       /* Transition for hover effects */
+    margin: 0 7px;              /* Spacing between buttons */
+}
+
+/* Hover effect for buttons */
+ToggleButton:hover {
+    background-color: #555;     /* Change color on hover */
+    color: #fff;                /* Change text color on hover */
+    transform: scale(1.05);     /* Slight scaling on hover */
+}
+
+/* Active state styling for toggle buttons */
+ToggleButton:checked {
+    background-color: #007bff;  /* Change background when button is active */
+    color: #fff;                /* Change text color when button is active */
+    border-color: #0056b3;      /* Adjust border color for active state */
+}

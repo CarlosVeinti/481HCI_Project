@@ -1,8 +1,5 @@
 import React from 'react';
 
-import WelcomeSection from '../../components/WelcomeSection/WelcomeSection';
-import LanguageButton from '../../components/LanguageButton/LanguageButton';
-import CategoriesButtons from '../../components/CategoriesButtons/CategoriesButtons';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import CategoriesSideBar from '../../components/CategoriesSideBar/CategoriesSideBar';
 import ItemCard from '../../components/ItemCard/ItemCard';
@@ -18,10 +15,11 @@ const customBackgroundStyle = {
 function BrowseItemsPage() {
     return (
         <>
-        <div className="browseItemsClass" style={customBackgroundStyle}>
-            <NavigationHeader/>
-            <h2> Appetizers Category </h2>
-            
+        <div>
+            <img src="/background.png" alt="Background Image" className='cover-image'></img>
+        </div>
+        <div className="browseItemsClass">
+            <NavigationHeader/>            
             <Row>
                 <Col>
                     <CategoriesSideBar/>
