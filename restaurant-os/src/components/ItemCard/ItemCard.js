@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { MdAddCircleOutline } from 'react-icons/md';
 import './ItemCard.css'
 
 function ItemCard({title, description, imageSrc}) {
@@ -18,11 +19,14 @@ function ItemCard({title, description, imageSrc}) {
           <Card.Text style={{ 
             color: "rgba(78, 78, 78)", 
             fontFamily: "'Playpen Sans', sans-serif", 
-            fontSize: '1.3rem' 
+            fontSize: '1.0rem' 
         }}>
           {description}
         </Card.Text>
-        <Button variant="primary">More Details</Button>
+        <Button variant="primary" className='moreDetailsButton'>More Details</Button>
+        <Button variant="primary">
+          <MdAddCircleOutline className="addIcon"/>
+        </Button>
       </Card.Body>
 
     </Card>
