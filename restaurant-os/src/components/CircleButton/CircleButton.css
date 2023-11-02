@@ -1,0 +1,18 @@
+.circle-button {
+    font-size: 24px;
+    padding: 20px; /* Increase padding to make the circular buttons bigger */
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 150px; /* Increase the width to make the circular buttons bigger */
+    height: 150px; /* Increase the height to make the circular buttons bigger */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-button:hover {
+    background-color: #2980b9;
+}
