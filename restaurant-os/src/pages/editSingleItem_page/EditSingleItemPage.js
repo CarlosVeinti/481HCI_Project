@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import IngredientButtonGroup from '../../components/IngredientButtons/ToggleButton'
 import ServingCounter from '../../components/IngredientButtons/ServingButton'
 import './EditSingleItemPage.css';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import BackButton from '../../components/BackButton/BackButton';
+import { Button } from 'react-bootstrap';
 
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee', // Replace with your desired background color
 };
 
 function EditSingleItemPage() {
+    const  [editMode,setEditMode]= useState(false)
     return (
         <div>
         <div>
@@ -32,7 +34,9 @@ function EditSingleItemPage() {
                 </div>
             </div>
             <div class="ingredients-box">
-        <ul>
+          {!editMode&&      <Button size="lg" onClick={()=>{setEditMode(!editMode)}}> Edit</Button>}
+          {editMode&&      <Button variant="danger" onClick={()=>{setEditMode(!editMode)}}> Cancel</Button>}
+      {editMode&&  <ul>
             <li>
                 <div className="ingredient-name">Noodles</div>
                 <div className="action-buttons">
@@ -62,7 +66,7 @@ function EditSingleItemPage() {
                     <IngredientButtonGroup groupId="ingredient" />
                 </div>
             </li>
-        </ul>
+        </ul>}
         
             <div className="add-to-cart-section">
                 <ServingCounter />
