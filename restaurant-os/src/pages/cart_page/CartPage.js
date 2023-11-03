@@ -12,7 +12,7 @@ function CartPage() {
             
             <div className="cart-item">
                 <div className="item-details">
-                    <img src="/noodles.jpeg" alt="Food Item" className="food-image" />
+                    <img src="/uptownramen.jpg" alt="Food Item" className="food-image" />
                     <div className="item-info">
                         <h3>Uptown Ramen</h3>
                         
@@ -32,7 +32,7 @@ function CartPage() {
 
             <div className="cart-item">
                 <div className="item-details">
-                    <img src="/sushi.png" alt="Food Item" className="food-image" />
+                    <img src="/californiaroll.jpg" alt="Food Item" className="food-image" />
                     <div className="item-info">
                         <h3>California Roll</h3>
                         
@@ -52,7 +52,7 @@ function CartPage() {
 
             <div className="cart-item">
                 <div className="item-details">
-                    <img src="/sushi.png" alt="Food Item" className="food-image" />
+                    <img src="/dynamiteroll.jpg" alt="Food Item" className="food-image" />
                     <div className="item-info">
                         <h3>Dynamite Roll</h3>
                         
@@ -112,7 +112,7 @@ function CartPage() {
 
             <div className="cart-item">
                 <div className="item-details">
-                    <img src="/sushi.png" alt="Food Item" className="food-image" />
+                    <img src="/philadelphiaroll.jpg" alt="Food Item" className="food-image" />
                     <div className="item-info">
                         <h3>Philadelphia Roll</h3>
                         
@@ -132,7 +132,7 @@ function CartPage() {
 
             <div className="cart-item">
                 <div className="item-details">
-                    <img src="/noodles.jpeg" alt="Food Item" className="food-image" />
+                    <img src="/tempuraudon.jpg" alt="Food Item" className="food-image" />
                     <div className="item-info">
                         <h3>Tempura Udon</h3>
                         
@@ -152,7 +152,7 @@ function CartPage() {
 
             <div className="cart-item">
                 <div className="item-details">
-                    <img src="/appetizers.jpeg" alt="Food Item" className="food-image" />
+                    <img src="/gyoza.jpg" alt="Food Item" className="food-image" />
                     <div className="item-info">
                         <h3>Gyoza (6 pcs)</h3>
                         
