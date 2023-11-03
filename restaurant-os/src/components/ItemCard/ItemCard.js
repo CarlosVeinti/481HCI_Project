@@ -1,36 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Modal from 'react-bootstrap/Modal';
 import { MdAddCircleOutline } from 'react-icons/md';
-import './ItemCard.css'
+import './ItemCard.css';
 
-function ItemCard({title, description, imageSrc}) {
+function ItemCard({ title, description, imageSrc }) {
+  const [showModal, setShowModal] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
-    <Card style={{ width: '16rem' }}>
+    <Card className='foodItemCard'>
+      {showModal ? (
+        <div className="d-flex justify-content-center align-items-center quantity-control">
+        <Button variant="secondary" onClick={decreaseQuantity} className="quantity-subtract-button">
+          -
+        </Button>
+        <span className="quantity-display">{quantity}</span>
+        <Button variant="secondary" onClick={increaseQuantity} className="quantity-add-button">
+          +
+        </Button>
+      </div>
+      ) : (
+        <Button variant="primary" className="addIcon" onClick={handleShowModal}>
+          <MdAddCircleOutline />
+        </Button>
+      )}
       <Card.Img variant="top" src={imageSrc} />
       <Card.Body>
-        <Card.Title style={{ 
-                color: 'black', 
-                fontFamily: "'Playpen Sans', sans-serif", 
-                fontSize: '2rem' 
-        }}>
-           {title}
-          </Card.Title>
-          <Card.Text style={{ 
-            color: "rgba(78, 78, 78)", 
-            fontFamily: "'Playpen Sans', sans-serif", 
-            fontSize: '1.0rem' 
-        }}>
+        <Card.Title style={{ color: 'black', fontFamily: "'Playpen Sans', sans-serif", fontSize: '2rem' }}>
+          {title}
+        </Card.Title>
+        <Card.Text style={{ color: "rgba(78, 78, 78)", fontFamily: "'Playpen Sans', sans-serif", fontSize: '1.0rem' }}>
           {description}
         </Card.Text>
-        <Button variant="primary" className='moreDetailsButton'>More Details</Button>
-        <Button variant="primary">
-          <MdAddCircleOutline className="addIcon"/>
+        <Button variant="primary" className="moreDetailsButton">
+          More Details
         </Button>
       </Card.Body>
-
     </Card>
-  )
+  );
 }
 
-export default ItemCard
+export default ItemCard;

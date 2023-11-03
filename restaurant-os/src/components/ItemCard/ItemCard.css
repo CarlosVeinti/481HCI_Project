@@ -3,5 +3,30 @@
 }
 
 .addIcon{
-    font-size: 25px; /* Adjust the size as needed */
+    font-size: 22px; /* Adjust the size as needed */
+    border-radius: 0;
 }
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-add-button {
+    margin: 4px; /* Adjust the margin as needed */
+  }
+
+
+.quantity-subtract-button{
+    margin: 4px; /* Adjust the margin as needed */
+}
+
+  
+  .quantity-display {
+    margin: 0 8px; /* Adjust the left and right margin as needed */
+  }
+
+  .foodItemCard {
+    border: 2px solid #8D6E63;
+    width: 18rem
+  }

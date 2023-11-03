@@ -18,3 +18,7 @@
     z-index: 0;
     opacity: 0.6;
 }
+
+.my-row{
+    margin-bottom: 8px; /* Adjust the margin as needed */ 
+}
