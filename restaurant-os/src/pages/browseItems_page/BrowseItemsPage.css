@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFFFFF; /* White background color */
+    /*background-color: #FFFFFF;  White background color */
     font-family: 'Arial', sans-serif; /* Sample font; you can replace this with any font of your choice */
     height: 100vh; /* Occupy full viewport height */
     padding: 20px;
@@ -13,10 +13,11 @@
 .cover-image {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     background-size: cover;
     z-index: 0;
     opacity: 0.6;
+    /* background-repeat: repeat-x; does not make it repeat*/
 }
 
 .my-row{
