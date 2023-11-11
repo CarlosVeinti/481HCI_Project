@@ -1,5 +1,4 @@
 import React from 'react';
-
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import CategoriesSideBar from '../../components/CategoriesSideBar/CategoriesSideBar';
 import BackButton from '../../components/BackButton/BackButton';
@@ -35,25 +34,25 @@ function BrowseItemsPage() {
 
             <Col>
             
-                <Row className="my-row">
-                    <Col className="my-col">
+                <Row className="my_bip_row">
+                    <Col className="my_bip_col">
                         <ItemCard title='Gyoza' description="Vegetable Gyoza" imageSrc="/Appetizers/DumplingsGyoza.png"/>
                     </Col>
-                    <Col className="my-col">
+                    <Col className="my_bip_col">
                         <ItemCard title='Spring Rolls' description="Pork Sprink Rolls" imageSrc="/Appetizers/SpringRolls.jpg"/>
                     </Col>
-                    <Col className="my-col">
+                    <Col className="my_bip_col">
                         <ItemCard title='Edamame' description="Edamame serving" imageSrc="/Appetizers/Edamame.jpg"/>
                     </Col>
                 </Row>
-                <Row className="my-row">
-                    <Col className="my-col">
+                <Row className="my_bip_row">
+                    <Col className="my_bip_col">
                         <ItemCard title="Hiyayakko" description="Contains Silken tofu" imageSrc="/Appetizers/Hiyayakko.jpg"/>
                     </Col>
-                    <Col className="my-col">
+                    <Col className="my_bip_col">
                         <ItemCard title="Salad Rolls" description="Salad Rolls serving" imageSrc="/Appetizers/SaladRolls.webp"/>
                     </Col>
-                    <Col className="my-col">
+                    <Col className="my_bip_col">
                         <ItemCard title="Okonomiyaki" description="Savory Japanese Pancake" imageSrc="/Appetizers/Okonomiyaki.jpg"  />
                     </Col>
                 </Row>

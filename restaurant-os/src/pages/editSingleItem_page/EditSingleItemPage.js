@@ -17,7 +17,7 @@ function EditSingleItemPage() {
         <div>
           <img src="/noodles.jpeg" alt="Background Image" className='cover-image-single'></img>
         </div>
-        <BackButton />
+        
         <div className="nav_Header" style={customBackgroundStyle}>
             <NavigationHeader/>
 
