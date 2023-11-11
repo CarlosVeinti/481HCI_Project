@@ -24,14 +24,17 @@ function BrowseItemsPage() {
 
         <div className="browseItemsClass">
             <NavigationHeader/>            
+            
+            <Container>
             <Row>
+            </Row>  
                 <Col>
                     <CategoriesSideBar/>
                 </Col>
-            </Row>
+                
 
             <Col>
-            <Container>
+            
                 <Row className="my-row">
                     <Col className="my-col">
                         <ItemCard title='Gyoza' description="Vegetable Gyoza" imageSrc="/Appetizers/DumplingsGyoza.png"/>
@@ -54,8 +57,9 @@ function BrowseItemsPage() {
                         <ItemCard title="Okonomiyaki" description="Savory Japanese Pancake" imageSrc="/Appetizers/Okonomiyaki.jpg"  />
                     </Col>
                 </Row>
-            </Container>
+            
             </Col>
+            </Container>
             
         </div>
         <div>

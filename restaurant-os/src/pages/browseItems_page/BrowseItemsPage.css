@@ -20,6 +20,11 @@
     /* background-repeat: repeat-x; does not make it repeat*/
 }
 
+.my-col {
+    max-width: 150px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the card */
+  }
+
 .my-row{
     margin-bottom: 8px; /* Adjust the margin as needed */ 
 }
