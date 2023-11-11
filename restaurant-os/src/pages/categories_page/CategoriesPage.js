@@ -17,12 +17,13 @@ function CategoriesPage() {
         <div>
           <img src="/background.png" alt="Background Image" className='cover-image'></img>
         </div>
-        <BackButton />
         <div className="nav_Header">
           <NavigationHeader />
           <Container>
             <Row className="my-row">
-                <Col className="my-col"><CategoryCard title="Appetizers" description="Start off right." imageSrc="/appetizers.jpeg"/></Col>
+                <Col className="my-col">
+                  <CategoryCard title="Appetizers" description="Start off right." imageSrc="/appetizers.jpeg" linkTo={"/browse-items"}/>
+                </Col>
                 <Col className="my-col"><CategoryCard title="Sushi" description="Freshly rolled delicacies." imageSrc="/sushi.png" /></Col>
                 <Col className="my-col"><CategoryCard title="Sashimi" description="Sliced raw fish." imageSrc="/sashimi.jpeg" /></Col>
             </Row>

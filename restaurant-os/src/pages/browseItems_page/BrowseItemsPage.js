@@ -13,13 +13,15 @@ const customBackgroundStyle = {
     backgroundColor: '#fff5ee', // Replace with your desired background color
 };
 
+// Eventually this Browse Items Page will have to be modular enough so that we can adapt to each category that we have.
+
 function BrowseItemsPage() {
     return (
         <>
         <div>
             <img src="/background.png" alt="Background Image" className='cover-image'></img>
         </div>
-        <BackButton />
+
         <div className="browseItemsClass">
             <NavigationHeader/>            
             <Row>

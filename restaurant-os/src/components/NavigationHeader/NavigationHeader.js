@@ -1,39 +1,43 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import './NavigationHeader.css';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'react-bootstrap/Image';
+import './NavigationHeader.css'; // Import your custom styles
 
-function OffcanvasExample() {
+function NavigationHeader() {
   return (
     <>
-      <Navbar expand={false} className="bg-body-tertiary mb-3">
-        <Container fluid>
-          <Navbar.Toggle aria-controls="offcanvasNavbar-expand" />
-          <Navbar.Offcanvas
-            id="offcanvasNavbar-expand"
-            aria-labelledby="offcanvasNavbarLabel-expand"
-            placement="end"
-          >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id="offcanvasNavbarLabel-expand">
-                Zen Umi
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Request Bill</Nav.Link>
-                <Nav.Link href="#action2">View Order</Nav.Link>
-              </Nav>
-              <div className="mt-3 text-center">
-                <img src='/logo.png' alt="Your Logo" style={{ width: '200px', height: 'auto' }} />
-             </div>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-        </Container>
+      <Navbar className="customNavbar">
+
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+        <Navbar.Collapse id="basic-navbar-nav">
+          <div className="navbarButtonsContainer">
+            {/* Your navigation links go here */}
+            <Button variant="primary" className="navbarButtons">Back</Button>
+            <Button variant="primary" className="navbarButtons">Request Bill</Button>
+
+            <Navbar.Brand className="customNavbarBrand">
+              <Image
+                src='/logo.png'
+                alt="Logo"
+                width="64"
+                height="64"
+                className="customImage"
+              />
+              <span className="customMargin"></span>
+            </Navbar.Brand>
+
+            {/* Your navigation links go here */}
+            <Button variant="primary" className="navbarButtons">Call Waiter</Button>
+            <Button variant="primary" className="navbarButtons">View Cart</Button>
+          </div>
+        </Navbar.Collapse>
+
       </Navbar>
     </>
   );
 }
 
-export default OffcanvasExample;
+export default NavigationHeader;

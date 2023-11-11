@@ -1,8 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './CategoryCard.css';
 
-function CategoryCard({ title, description, imageSrc }) {
+function CategoryCard({ title, description, imageSrc, linkTo }) {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={imageSrc} />
@@ -21,7 +23,9 @@ function CategoryCard({ title, description, imageSrc }) {
         }}>
           {description}
         </Card.Text>
-        <Button variant="primary">Browse options</Button>
+        <Link to={linkTo}>
+          <Button variant="primary">Browse options</Button>
+        </Link>
       </Card.Body>
     </Card>
   );
