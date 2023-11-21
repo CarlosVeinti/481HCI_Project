@@ -4,8 +4,10 @@ import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import { MdAddCircleOutline } from 'react-icons/md';
 import './ItemCard.css';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-function ItemCard({ title, description, imageSrc }) {
+function ItemCard({ title, description, imageSrc, price }) {
   const [showModal, setShowModal] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
@@ -41,15 +43,25 @@ function ItemCard({ title, description, imageSrc }) {
       )}
       <Card.Img variant="top" src={imageSrc} />
       <Card.Body>
-        <Card.Title style={{ color: 'black', fontFamily: "'Playpen Sans', sans-serif", fontSize: '2rem' }}>
-          {title}
-        </Card.Title>
-        <Card.Text style={{ color: "rgba(78, 78, 78)", fontFamily: "'Playpen Sans', sans-serif", fontSize: '1.0rem' }}>
-          {description}
-        </Card.Text>
-        <Button variant="primary" className="moreDetailsButton">
-          More Details
-        </Button>
+        <Row>
+          <Col md={8}>
+            <Card.Title style={{ color: 'black', fontFamily: "'Playpen Sans', sans-serif", fontSize: '1rem' }}>
+              {title}
+            </Card.Title>
+            <Card.Text style={{ color: "rgba(78, 78, 78)", fontFamily: "'Playpen Sans', sans-serif", fontSize: '1.0rem' }}>
+              {description}
+            </Card.Text>
+            <Button variant="primary" className="moreDetailsButton">
+              More Details
+            </Button>
+          </Col>
+          
+          <Col md={4} className="price-col">
+            <Card.Text style={{ color: 'green', fontFamily: "'Playpen Sans', sans-serif", fontSize: '1.2rem', fontWeight: 'bold' }}>
+              {price ? `$${price.toFixed(2)}` : 'Price: N/A'}
+            </Card.Text>
+          </Col>
+        </Row>
       </Card.Body>
     </Card>
   );

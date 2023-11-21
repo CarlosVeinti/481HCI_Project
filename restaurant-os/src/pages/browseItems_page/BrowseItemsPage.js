@@ -36,24 +36,24 @@ function BrowseItemsPage() {
             
                 <Row className="my_bip_row">
                     <Col className="my_bip_col">
-                        <ItemCard title='Gyoza' description="Vegetable Gyoza" imageSrc="/Appetizers/DumplingsGyoza.png"/>
+                        <ItemCard title='Gyoza' description="Vegetable Gyoza" imageSrc="/Appetizers/DumplingsGyoza.png" price={5.99}/>
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title='Spring Rolls' description="Pork Sprink Rolls" imageSrc="/Appetizers/SpringRolls.jpg"/>
+                        <ItemCard title='Spring Rolls' description="Pork Sprink Rolls" imageSrc="/Appetizers/SpringRolls.jpg" price={5.99}/>
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title='Edamame' description="Edamame serving" imageSrc="/Appetizers/Edamame.jpg"/>
+                        <ItemCard title='Edamame' description="Edamame serving" imageSrc="/Appetizers/Edamame.jpg" price={5.99}/>
                     </Col>
                 </Row>
                 <Row className="my_bip_row">
                     <Col className="my_bip_col">
-                        <ItemCard title="Hiyayakko" description="Contains Silken tofu" imageSrc="/Appetizers/Hiyayakko.jpg"/>
+                        <ItemCard title="Hiyayakko" description="Contains Silken tofu" imageSrc="/Appetizers/Hiyayakko.jpg" price={5.99}/>
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title="Salad Rolls" description="Salad Rolls serving" imageSrc="/Appetizers/SaladRolls.webp"/>
+                        <ItemCard title="Salad Rolls" description="Salad Rolls serving" imageSrc="/Appetizers/SaladRolls.webp" price={5.99}/>
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title="Okonomiyaki" description="Savory Japanese Pancake" imageSrc="/Appetizers/Okonomiyaki.jpg"  />
+                        <ItemCard title="Okonomiyaki" description="Japanese Pancake" imageSrc="/Appetizers/Okonomiyaki.jpg" price={5.99}/>
                     </Col>
                 </Row>
             
