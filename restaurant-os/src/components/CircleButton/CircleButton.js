@@ -1,12 +1,21 @@
 import React from 'react';
-import './CircleButton.css'; // Create a separate CSS file for styling
+import PropTypes from 'prop-types';
+import './CircleButton.css'; // Import your CSS file for styling
 
-function CircleButton(props) {
-    return (
-        <button className="circle-button">
-            {props.children}
-        </button>
-    );
-}
+const CircleButton = ({ children, className, status }) => {
+  const buttonStyle = {
+    // Any shared styles here
+  };
+
+  const buttonText = status ? `${children} - ${status}` : children;
+
+  return <button className={`circle-button ${className}`} style={buttonStyle}>{buttonText}</button>;
+};
+
+CircleButton.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  status: PropTypes.string,
+};
 
 export default CircleButton;

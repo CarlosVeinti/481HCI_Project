@@ -27,7 +27,10 @@ function TopLeftButton() {
 
 function WaiterPage() {
     const customBackgroundStyle = {
-        backgroundColor: '#fff5ee',
+        background: 'url("/public/background.png")', // Replace "path/to/your/image.jpg" with the actual path to your image file
+  backgroundSize: 'cover', // You can adjust this property based on your image size preferences
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed',
     };
 
     const customBackgroundStyle2 = {
@@ -35,31 +38,16 @@ function WaiterPage() {
     };
 
     const orders = [
-        { id: 1, item: 'Item 1', quantity: 2, date: '2023-10-31 10pm' },
-        { id: 2, item: 'Item 2', quantity: 1, date: '2023-10-30' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
+        { id: 1, item: 'Spicy Tuna', quantity: 2, date: '2023-10-31 10pm' },
+        { id: 2, item: 'Salmon Sushi', quantity: 1, date: '2023-10-30' },
+        { id: 3, item: 'California Rolls', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Rainbow Rolls', quantity: 1, date: '2023-10-29' },
+        { id: 3, item: 'Okonomiyaki', quantity: 4, date: '2023-10-29' },
+        { id: 3, item: 'Miso Soup', quantity: 5, date: '2023-10-29' },
+        { id: 3, item: 'Yakitori', quantity: 9, date: '2023-10-29' },
+        { id: 3, item: 'Udon', quantity: 2, date: '2023-10-29' },
+        { id: 3, item: 'Takoyaki', quantity: 7, date: '2023-10-29' },
+
     ];
     const handleItemClick = (item) => {
         // Handle the click on the item here
@@ -67,14 +55,19 @@ function WaiterPage() {
     };
 
     return (        
-    <div className="parent" style={customBackgroundStyle}>
+    <div className="parent" >
+        
         <TopLeftButton />
-        <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center' }}>Order History</h1>
-        <div className="centered-container" style={customBackgroundStyle}>
+        
+        <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center', fontWeight: 'bold', color: 'black' }}>Order History</h1>
 
-            <div className="order-container" style={{ maxHeight: '500px', overflowY: 'auto' }}>
+        <h2 className="tableNumber" style={{ margin: 0, fontSize: '32px', textAlign: 'center', color: 'black' }}> Table 1 History of Orders</h2>
+        
+       
+            
+            <div className="order-container" style={{ maxHeight: 'auto', overflowY: 'auto' }}>
                 
-                <table className="order-preview" style={{ ...customBackgroundStyle2, width: '100%' }}>
+                <table className="order-preview" style={{ ...customBackgroundStyle2, width: '90%'}}>
                 
                     <thead>
                         <tr>
@@ -84,9 +77,9 @@ function WaiterPage() {
                             <th style={{ width: '30%' }}>Date</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         {orders.map((order, index) => (
-                            <tr key={order.id}>
+                            <tr key={order.id} style={{ height: '60px' }} >
                                 <td>{index + 1}</td>
                                 <td>
                                     <a
@@ -101,12 +94,11 @@ function WaiterPage() {
                                 </td>
                                 <td>{order.quantity}</td>
                                 <td>{order.date}</td>
-
                             </tr>
                         ))}
                     </tbody>
                 </table>
-            </div>
+            
         </div>
         </div>
     );

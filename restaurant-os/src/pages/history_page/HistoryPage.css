@@ -1,9 +1,31 @@
 /* Centered container */
+
+.parent {
+    background: url("/public/background.png"); /* Replace "/public/background.png" with the actual path to your image file */
+    background-size: cover; /* You can adjust this property based on your image size preferences */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .centered-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* 100% viewport height */
+}
+
+
+
+.tableNumber {
+    padding-top: 10px;
+    padding: 1%;
+}
+
+
+.order-container {
+    background-color: '#FFFFFF';
+    padding: 5%;
+    padding-left: 15%;
+    
 }
 
 /* Style for the order preview container */
@@ -12,11 +34,15 @@
     max-height: 400px; /* Set a maximum height to create a scrollable container */
     border: 1px solid #ccc;
     overflow-y: scroll; /* Add a vertical scroll bar when content exceeds the max height */
+    padding-left: 5%;
+    border-radius: 5px;
+    background-color: '#FFFFFF';
+    width: 90%;
 }
 
 /* Style for each item in the list */
 .order-item {
-    padding: 10px;
+    padding: auto;
     border-bottom: 1px solid #6e0b0b;
     display: flex;
     justify-content: space-between;
@@ -31,4 +57,5 @@
 .order-preview td {
     border-right: 1px solid #ccc;
 }
+
 

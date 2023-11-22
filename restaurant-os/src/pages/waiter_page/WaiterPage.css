@@ -1,10 +1,27 @@
+.parent {
+    background: url("/public/background.png"); /* Replace "/public/background.png" with the actual path to your image file */
+    background-size: cover; /* You can adjust this property based on your image size preferences */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 4%;
+}
+
+
 /* Centered container */
 .centered-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* 100% viewport height */
+    padding: 2%;
 }
+
+.centered-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+
 
 /* Style for the order preview container */
 .order-preview {
@@ -16,7 +33,7 @@
 
 /* Style for each item in the list */
 .order-item {
-    padding: 10px;
+    padding: 5px;
     border-bottom: 1px solid #6e0b0b;
     display: flex;
     justify-content: space-between;

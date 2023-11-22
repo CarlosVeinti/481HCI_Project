@@ -36,13 +36,13 @@ function BrowseItemsPage() {
             
                 <Row className="my_bip_row">
                     <Col className="my_bip_col">
-                        <ItemCard title='Gyoza' description="Vegetable Gyoza" imageSrc="/Appetizers/DumplingsGyoza.png" price={5.99}/>
+                        <ItemCard title='Gyoza' description="5 servings" imageSrc="/Appetizers/DumplingsGyoza.png" price={5.99}/>
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title='Spring Rolls' description="Pork Sprink Rolls" imageSrc="/Appetizers/SpringRolls.jpg" price={5.99}/>
+                        <ItemCard title='Spring Rolls' description="Pork - (3 pieces)" imageSrc="/Appetizers/SpringRolls.jpg" price={5.99}/>
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title='Edamame' description="Edamame serving" imageSrc="/Appetizers/Edamame.jpg" price={5.99}/>
+                        <ItemCard title='Edamame' description="200 grams" imageSrc="/Appetizers/Edamame.jpg" price={5.99}/>
                     </Col>
                 </Row>
                 <Row className="my_bip_row">

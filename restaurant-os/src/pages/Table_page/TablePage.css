@@ -1,3 +1,10 @@
+.parent {
+    background: url("/public/background.png"); /* Replace "/public/background.png" with the actual path to your image file */
+    background-size: cover; /* You can adjust this property based on your image size preferences */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 8%;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,7 +18,21 @@ body {
     height: 100%;
     align-items: center;
     gap: 10px; /* Control horizontal spacing between columns */
+    padding-top: 5%;
 }
+
+.circle-button {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 25px; /* Add margin-bottom to create vertical space between circles */
+    border: 2px solid transparent;
+  }
 
 .button-column {
     display: flex;

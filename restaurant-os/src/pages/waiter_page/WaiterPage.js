@@ -1,11 +1,13 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-
 import WelcomeSection from '../../components/WelcomeSection/WelcomeSection';
 import LanguageButton from '../../components/LanguageButton/LanguageButton';
 import CategoriesButtons from '../../components/CategoriesButtons/CategoriesButtons';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import './WaiterPage.css';
+import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch'; // Adjust the import path based on your project structure
+import { useState } from 'react';
+
 
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee', 
@@ -23,7 +25,7 @@ function TopLeftButton() {
 
     return (
         <div style={buttonStyle}>
-            <Button variant="primary">Table</Button>
+            <Button variant="primary">Tables</Button>
         </div>
     );
 }
@@ -44,6 +46,15 @@ function TopRightButton() {
 }
 
 function WaiterPage() {
+
+
+    const [isOccupied, setIsOccupied] = useState(false);
+  
+    const handleToggle = (isChecked) => {
+      setIsOccupied(isChecked);
+    };
+
+
     const customBackgroundStyle = {
         backgroundColor: '#fff5ee',
     };
@@ -53,31 +64,22 @@ function WaiterPage() {
     };
 
     const orders = [
-        { id: 1, item: 'Item 1', quantity: 2, date: '2023-10-31 10pm' },
-        { id: 2, item: 'Item 2', quantity: 1, date: '2023-10-30' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Item 3', quantity: 3, date: '2023-10-29' },
+        { id: 1, item: 'Spicy Tuna', quantity: 2, date: '2023-10-31 10pm' },
+        { id: 2, item: 'Salmon Sushi', quantity: 1, date: '2023-10-30' },
+        { id: 3, item: 'California Rolls', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Rainbow Rolls', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Okonomiyaki', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Miso Soup', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Mango Rolls', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Chicken Skewers', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Tempura Vegetables', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Fried Rice', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Spring Rolls', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Vegetable Rolls', quantity: 3, date: '2023-10-29' },
+        { id: 3, item: 'Beef Skewers', quantity: 3, date: '2023-10-29' },
+   
+
+
     ];
     const handleItemClick = (item) => {
         // Handle the click on the item here
@@ -85,15 +87,17 @@ function WaiterPage() {
     };
 
     return (
-        <div className="parent" style={customBackgroundStyle}>
+        <div className="parent" >
 
-        <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center' }}>Active Orders</h1>
+        <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center', fontWeight: 'bold' }}>Active Orders</h1>
+        <h2 className="tableNumber" style={{ margin: 0, fontSize: '32px', textAlign: 'center', color: 'black' }}> Table 1 Active Orders</h2>
+        
+    
 
-        <div className="centered-container" style={customBackgroundStyle}>
         <TopLeftButton />
         <TopRightButton />
-
-            <div className="order-container" style={{ maxHeight: '500px', overflowY: 'auto' }}>
+ 
+        <div className="order-container" >
                 <table className="order-preview" style={{ ...customBackgroundStyle2, width: '100%' }}>
                     <thead>
                         <tr>
@@ -129,7 +133,6 @@ function WaiterPage() {
                     </tbody>
                 </table>
             </div>
-        </div>
     </div>    
     );
 }
