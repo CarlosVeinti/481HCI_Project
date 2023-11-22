@@ -11,19 +11,17 @@ const customBackgroundStyle = {
 };
 
 function EditSingleItemPage() {
-    const  [editMode,setEditMode]= useState(false)
+    const  [editMode,setEditMode]= useState(true)
     return (
         <div>
-        <div>
-          <img src="/noodles.jpeg" alt="Background Image" className='cover-image-single'></img>
-        </div>
+        <div className='background_image'> </div>
         
         <div className="nav_Header" style={customBackgroundStyle}>
             <NavigationHeader/>
 
             <div className="content-container">
                 <div className="image-container">
-                    <img src="noodles.jpeg" alt="Item" className="item-image"/>
+                    <img src="chickenRamen.jpg" alt="Item" className="item-image"/>
                     <div className="item-name">Uptown Ramen</div>
                     <div className="item-price">$12.99</div>
                     
@@ -34,9 +32,12 @@ function EditSingleItemPage() {
                 </div>
             </div>
             <div class="ingredients-box">
-          {!editMode&&      <Button size="lg" onClick={()=>{setEditMode(!editMode)}}> Edit</Button>}
-          {editMode&&      <Button variant="danger" onClick={()=>{setEditMode(!editMode)}}> Cancel</Button>}
-      {editMode&&  <ul>
+
+            
+
+            {editMode&&
+            <ul>
+              
             <li>
                 <div className="ingredient-name">Noodles</div>
                 <div className="action-buttons">
@@ -63,18 +64,18 @@ function EditSingleItemPage() {
             <li>
                 <div className="ingredient-name">Green Scallion</div>
                 <div className="action-buttons">
-                    <IngredientButtonGroup groupId="ingredient" />
+                    <IngredientButtonGroup groupId="ingredient4" />
                 </div>
             </li>
-        </ul>}
-        
-            <div className="add-to-cart-section">
+         </ul>
+        }
+          <div className="add-to-cart-section">
                 <ServingCounter />
                 <button className="add-to-cart-btn">Add to Cart</button>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
+        </div>
     );
 }
 

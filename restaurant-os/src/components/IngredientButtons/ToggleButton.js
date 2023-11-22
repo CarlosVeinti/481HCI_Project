@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import './ToggleButtons.css';
@@ -8,6 +8,7 @@ function IngredientButtonGroup({ groupId }) {
 
   const radios = [
     { name: 'Remove', value: 'remove' },
+    { name: 'Regular', value: 'regular'},
     { name: 'Double', value: 'double' },
     { name: 'Triple', value: 'triple' },
   ];
@@ -35,7 +36,7 @@ function IngredientButtonGroup({ groupId }) {
             value={radio.value}
             checked={radioValue === radio.value}
             onChange={handleButtonClick}  // Use the custom handler here
-            style={{ borderRadius: '50%', width: '90px', height: '90px' }}
+            style={{ borderRadius: '50%', width: '90px', height: '90px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
           >
             {radio.name}
           </ToggleButton>

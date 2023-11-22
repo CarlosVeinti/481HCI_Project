@@ -10,6 +10,8 @@
     z-index: 1;
 }
 
+
+
 .image-container {
     width: 35vw;        /* set the desired width */
     height: 40vh;       /* set the desired height */
@@ -71,7 +73,7 @@
     background-color: orange; /* Optional background color */
     border-radius: 15px;
     margin-top: 55px;
-    width: 30vw;
+    width: 40vw;
     height: 38vh;
     display: inline-block;
     z-index: 1;
@@ -154,7 +156,7 @@
 .add-to-cart-section button {
     background-color: #0d6efd;
     color: white;
-    padding: 20px 40px;  /* Bigger padding for bigger button */
+    padding: auto auto;  /* Bigger padding for bigger button */
     border-radius: 50px;
     font-size: 20px;     /* Bigger font */
     border: none;
@@ -168,11 +170,17 @@
     z-index: 1;
 }
 
-.cover-image-single {
+.background_image {
+    background-image: url('/public/background.png');
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     background-size: cover;
+    background-attachment: fixed;
     z-index: 0;
     opacity: 0.5;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
