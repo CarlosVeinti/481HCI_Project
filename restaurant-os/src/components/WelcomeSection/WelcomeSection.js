@@ -9,7 +9,12 @@ function WelcomeSection() {
         <div className="welcome-section">
             <h2>WELCOME</h2>
             <p>Browse our menu</p>
-            <Button variant="danger" onClick={()=>{navigate("/categories")}} className="custom-button">Menu</Button>
+            <Button 
+                variant="danger"
+                onClick={()=>{navigate("/categories")}} 
+                className="custom-button">
+                    Menu
+            </Button>
         </div>
     );
 }
