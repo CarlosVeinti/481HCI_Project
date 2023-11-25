@@ -29,7 +29,7 @@ function CategoriesSideBar() {
             </Row>
 
             <Row className="catSideRows">
-                <Button variant="primary" className='catSide_Btn'>Noodles</Button>
+                <Button variant="primary" className='catSide_Btn'>Ramen</Button>
             </Row>
 
             <Row className="catSideRows">

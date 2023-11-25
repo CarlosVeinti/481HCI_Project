@@ -28,7 +28,7 @@ function CategoriesPage() {
                 <Col className="my-col"><CategoryCard title="Sashimi" description="Sliced raw fish." imageSrc="/sashimi.jpeg" /></Col>
             </Row>
             <Row className="my-row">
-                <Col className="my-col"><CategoryCard title="Noodles" description="Slurp-worthy goodness." imageSrc="/noodles.jpeg"/></Col>
+                <Col className="my-col"><CategoryCard title="Ramen" description="Slurp-worthy goodness." imageSrc="/noodles.jpeg"/></Col>
                 <Col className="my-col"><CategoryCard title="Desserts" description="Sweet indulgences." imageSrc="/desert.png"/></Col>
                 <Col className="my-col"><CategoryCard title="Beverages" description="Quench your thirst." imageSrc="/drinks.jpeg"/></Col>
             </Row>

@@ -77,6 +77,7 @@
     height: 38vh;
     display: inline-block;
     z-index: 1;
+    font-size: 5px; /* Adjust the value as needed */
 }
 
 .description-container p{

@@ -6,8 +6,9 @@ import { MdAddCircleOutline } from 'react-icons/md';
 import './ItemCard.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
-function ItemCard({ title, description, imageSrc, price }) {
+function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
   const [showModal, setShowModal] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
@@ -46,14 +47,21 @@ function ItemCard({ title, description, imageSrc, price }) {
         <Row>
           <Col md={8}>
             <Card.Title style={{ color: 'black', fontFamily: "'Playpen Sans', sans-serif", fontSize: '1rem' }}>
-              {title}
+              {itemName}
             </Card.Title>
             <Card.Text style={{ color: "rgba(78, 78, 78)", fontFamily: "'Playpen Sans', sans-serif", fontSize: '1.0rem' }}>
-              {description}
+              {briefDescri}
             </Card.Text>
-            <Button variant="primary" className="moreDetailsButton">
-              More Details
-            </Button>
+            <Link
+              to={`/edit-single-item/${encodeURIComponent(itemName)}`}
+              state={{ itemName, imageSrc, price, longDescri }}
+              className="moreDetailsLink"
+            >
+              <Button variant="primary" className="moreDetailsButton">
+                More Details
+              </Button>
+            </Link>
+            
           </Col>
           
           <Col md={4} className="price-col">

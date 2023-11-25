@@ -36,24 +36,62 @@ function BrowseItemsPage() {
             
                 <Row className="my_bip_row">
                     <Col className="my_bip_col">
-                        <ItemCard title='Gyoza' description="5 servings" imageSrc="/Appetizers/DumplingsGyoza.png" price={5.99}/>
+                        <ItemCard 
+                            itemName='Gyoza'
+                            briefDescri="5 servings"
+                            imageSrc="/Appetizers/DumplingsGyoza.png"
+                            price={7.99}
+                            longDescri= "Savory Vegetable Gyozas"
+                        />
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title='Spring Rolls' description="Pork - (3 pieces)" imageSrc="/Appetizers/SpringRolls.jpg" price={5.99}/>
+                        <ItemCard 
+                            itemName='Spring Rolls'
+                            briefDescri="Pork - (3 pieces)"
+                            imageSrc="/Appetizers/SpringRolls.jpg"
+                            price={6.99}
+                            longDescri= "Savory Pork Spring Rolls"
+                        />
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title='Edamame' description="200 grams" imageSrc="/Appetizers/Edamame.jpg" price={5.99}/>
+                        <ItemCard 
+                            itemName='Edamame' 
+                            briefDescri="200 grams"
+                            imageSrc="/Appetizers/Edamame.jpg"
+                            price={3.99}
+                            longDescri= "Fresh Edamame served with Sea salt"
+                        />
                     </Col>
                 </Row>
                 <Row className="my_bip_row">
                     <Col className="my_bip_col">
-                        <ItemCard title="Hiyayakko" description="Contains Silken tofu" imageSrc="/Appetizers/Hiyayakko.jpg" price={5.99}/>
+                        <ItemCard
+                         itemName="Hiyayakko"
+                         briefDescri="Contains Silken tofu"
+                         imageSrc="/Appetizers/Hiyayakko.jpg"
+                         price={5.99}
+                         longDescri="Hiyayakko is a delightful and refreshing Japanese dish that effortlessly combines simplicity with incredible flavors. This cold tofu salad is not just a meal; it's a culinary experience that will tantalize your taste buds and leave you craving for more."
+                        />
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title="Salad Rolls" description="Salad Rolls serving" imageSrc="/Appetizers/SaladRolls.webp" price={5.99}/>
+                        <ItemCard 
+                            itemName="Salad Rolls"
+                            briefDescri="Salad Rolls serving"
+                            imageSrc="/Appetizers/SaladRolls.webp"
+                            price={8.99}
+                            longDescri="Delicate rice paper wrappers enveloping succulent shrimp, complemented by tender rice vermicelli and a garden of aromatic herbs like mint, cilantro, and Thai basil. "
+                        />
                     </Col>
                     <Col className="my_bip_col">
-                        <ItemCard title="Okonomiyaki" description="Japanese Pancake" imageSrc="/Appetizers/Okonomiyaki.jpg" price={5.99}/>
+                        <ItemCard 
+                            itemName="Okonomiyaki"
+                            briefDescri="Japanese Pancake"
+                            imageSrc="/Appetizers/Okonomiyaki.jpg"
+                            price={10.99}
+                            longDescri="A batter made with flour, grated yam, and shredded cabbage. Tender slices of pork belly, fresh green onions, and a generous sprinkle of tenkasu (tempura crumbs).
+                                        The pièce de résistance? Our signature okonomiyaki sauce — 
+                                        a sweet and savory drizzle."
+                        />
                     </Col>
                 </Row>
             
