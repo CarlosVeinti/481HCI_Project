@@ -172,7 +172,7 @@ function CartPage() {
 
 
           </div>
-          <p className="total-price">Total: $36.00</p>
+          <p className="total-price">Total: $87.00</p>
 
 
           <div className="button-container">
