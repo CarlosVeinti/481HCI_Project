@@ -4,9 +4,11 @@ import CartItem from '../../components/CartItem/CartItem';
 import './CartPage.css';
 import { FaTrash } from 'react-icons/fa'; // Import the trash can icon
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
+import { useNavigate } from 'react-router-dom';
 
 
 function CartPage() {
+    const navigate = useNavigate();
     // Currently hard coded to show cart page
     const [cartItems, setCartItems] = useState([
         {
@@ -70,23 +72,23 @@ function CartPage() {
         setCartItems((prevItems) => prevItems.filter((item) => item.itemName !== itemName));
     }
 
-    const increaseQuantity = (itemName) => {
-        setCartItems((prevItems) =>
-          prevItems.map((item) =>
-            item.itemName === itemName ? { ...item, quantity: item.quantity + 1 } : item
-          )
-        );
-      };
-    
-      const decreaseQuantity = (itemName) => {
-        setCartItems((prevItems) =>
-          prevItems.map((item) =>
-            item.itemName === itemName && item.quantity > 1
-              ? { ...item, quantity: item.quantity - 1 }
-              : item
-          )
-        );
-      };
+  const increaseQuantity = (itemName) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.itemName === itemName ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  const decreaseQuantity = (itemName) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.itemName === itemName && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
+  };
       
     return (
         <div className="nav_Header">
@@ -108,7 +110,7 @@ function CartPage() {
                 <p className = "total-price">Total: ${calculateTotalPrice()}</p>
                 <div className = "returnsubmitbutton-container">
                     <div className = "return-to-menu">
-                        <button className = "btn btn-primary">Return to Menu</button>
+                        <button className = "btn btn-primary" onClick={() => navigate("/categories")} >Return to Menu</button>
                     </div>
                     <div className="cart-summary">
                         <button className="btn btn-success">Submit Order</button>
