@@ -18,11 +18,17 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
 
 
   const [showModal, setShowModal] = useState(false);
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
+  const handleButtonClick = () => {
+    handleShowModal();
+    increaseQuantity();
+  };
+  
+  
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
     // for redux
@@ -42,6 +48,7 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
     }
       
       // Dispatch removeItemFromCart action
+      // for redux
       dispatch(removeItemFromCart({
         itemName,
         price,
@@ -77,7 +84,7 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
         </Button>
       </div>
       ) : (
-        <Button variant="primary" className="addIcon" onClick={handleShowModal}>
+        <Button variant="primary" className="addIcon" onClick={handleButtonClick}>
           <MdAddCircleOutline />
         </Button>
       )}
