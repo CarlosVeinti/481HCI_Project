@@ -8,6 +8,35 @@ import Col from 'react-bootstrap/Col';
 import './BrowseItemsPage.css'
 import { Container } from 'react-bootstrap';
 
+
+
+const itemData = {
+    appetizers: [
+      // Define appetizers data here
+      // ...
+    ],
+    sushi: [
+      // Define sushi data here
+      // ...
+    ],
+    sashimi: [
+      // Define sashimi data here
+      // ...
+    ],
+    ramen: [
+      // Define ramen data here
+      // ...
+    ],
+    desserts: [
+      // Define desserts data here
+      // ...
+    ],
+    beverages: [
+      // Define beverages data here
+      // ...
+    ],
+  };
+
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee', // Replace with your desired background color
 };

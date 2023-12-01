@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   {
-    path: '/browse-items',
+    path: '/browse-items/:category',
     element: <BrowseItemsPage />,
   },
   {
