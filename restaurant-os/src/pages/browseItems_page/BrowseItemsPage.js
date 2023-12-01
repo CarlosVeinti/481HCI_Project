@@ -33,15 +33,13 @@ function BrowseItemsPage() {
             <img src="/background.png" alt="Background Image" className='cover-image'></img>
         </div>
 
+        <NavigationHeader/>
+        <CategoriesSideBar/>     
         <div className="browseItemsClass">
-            <NavigationHeader/>            
+                   
             
             <Container>
-            <Row>
-            </Row>  
-                <Col>
-                    <CategoriesSideBar/>
-                </Col>
+          
                 
                 <Col>
                     {chunkedItems.map((row, rowIndex) => (

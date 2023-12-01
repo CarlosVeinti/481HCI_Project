@@ -103,9 +103,24 @@ const itemData = {
         itemName:"Sapporo Beer",
         briefDescri:"1 Bottle",
         imageSrc: "/Beverages/sapporoBeerBottle.jpeg",
-        price: 5.99,
+        price: 3.49,
         longDescri: "Taste of Malt, cereal, herbs, hops, honey, apple",
+      },
+      {
+        itemName:"Coca-Cola",
+        briefDescri:"1 Bottle",
+        imageSrc: "/Beverages/cocaCola.jpeg",
+        price: 2.99,
+        longDescri: "Original Coca-Cola",
+      },
+      {
+        itemName:"Green Tea",
+        briefDescri:"1 Tea Pot",
+        imageSrc: "/Beverages/GreenTeaPot.webp",
+        price: 2.99,
+        longDescri: "64 oz serving",
       }
+
     ],
 
 
