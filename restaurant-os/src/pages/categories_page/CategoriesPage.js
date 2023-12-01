@@ -67,7 +67,7 @@ function CategoriesPage() {
         <NavigationHeader />
         <Container>
           <Row className="my-row">
-            {categories.map((category, index) => (
+            {categories.slice(0,3).map((category, index) => (
               <Col key={index} className="my-col">
                 <CategoryCard
                   title={category.title}
@@ -77,8 +77,20 @@ function CategoriesPage() {
                 />
               </Col>
             ))}
-            
           </Row>
+          <Row className="my-row">
+            {categories.slice(3,6).map((category, index) => (
+              <Col key={index} className="my-col">
+                <CategoryCard
+                  title={category.title}
+                  description={category.description}
+                  imageSrc={category.imageSrc}
+                  linkTo={category.linkTo}
+                />
+              </Col>
+            ))}
+          </Row>
+
         </Container>
       </div>
     </>

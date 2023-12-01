@@ -40,9 +40,7 @@ function CategoriesSideBar() {
                 <Button variant="primary" className='catSide_Btn'>Beverages</Button>
             </Row>
 
-            <Row className="catSideRows">
-                <Button variant="primary" className='catSide_Btn'>Famous Dishes</Button>
-            </Row>
+           
             
 
 
