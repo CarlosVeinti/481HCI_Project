@@ -7,6 +7,7 @@ import NavigationHeader from '../../components/NavigationHeader/NavigationHeader
 
 
 function CartPage() {
+    // Currently hard coded to show cart page
     const [cartItems, setCartItems] = useState([
         {
             itemName: "Uptown Ramen",
@@ -59,6 +60,8 @@ function CartPage() {
         }
     ]);
 
+    const [quantity, setQuantity] = useState(1);
+
     const calculateTotalPrice = () => {
         return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
     }
@@ -67,6 +70,24 @@ function CartPage() {
         setCartItems((prevItems) => prevItems.filter((item) => item.itemName !== itemName));
     }
 
+    const increaseQuantity = (itemName) => {
+        setCartItems((prevItems) =>
+          prevItems.map((item) =>
+            item.itemName === itemName ? { ...item, quantity: item.quantity + 1 } : item
+          )
+        );
+      };
+    
+      const decreaseQuantity = (itemName) => {
+        setCartItems((prevItems) =>
+          prevItems.map((item) =>
+            item.itemName === itemName && item.quantity > 1
+              ? { ...item, quantity: item.quantity - 1 }
+              : item
+          )
+        );
+      };
+      
     return (
         <div className="nav_Header">
         <NavigationHeader />
@@ -74,7 +95,13 @@ function CartPage() {
             <h2>Your Cart</h2>
             <div className="cart-items">
                 {cartItems.map((item) => (
-                <CartItem key={item.itemName} item={item} removeFromCart={removeFromCart} />
+                <CartItem 
+                    key={item.itemName} 
+                    item={item} 
+                    removeFromCart={removeFromCart} 
+                    increaseQuantity={increaseQuantity}
+                    decreaseQuantity={decreaseQuantity}
+                    />
                 ))}
                 </div>
 
