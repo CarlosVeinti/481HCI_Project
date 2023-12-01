@@ -34,7 +34,7 @@ function NavigationHeader() {
 
             {/* Your navigation links go here */}
             <Button variant="primary" className="navbarButtons">Call Waiter</Button>
-            <Button variant="primary" className="navbarButtons">View Cart</Button>
+            <Button variant="primary" className="navbarButtons" onClick={() => navigate("/cart")} >View Cart</Button>
           </div>
         </Navbar.Collapse>
 
