@@ -1,0 +1,67 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.cart-item p {
+  color: #333; /* Set the desired font color */
+  font-size: 14px; /* Set the desired font size */
+  
+}
+
+.cart-summary p {
+  text-align: right;
+
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+}
+
+.food-image {
+  width: 100px; /* Set the width of the food image */
+  margin-right: 20px; /* Add some spacing between the image and text */
+}
+
+.item-info {
+  width: 200px;
+  /*flex-grow: 1; /* Allow the item-info to take the remaining space */
+}
+
+.quantity-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.quantity-container span {
+  margin-right: 10px; /* Adjust the value based on your preferred spacing */
+  margin-left: 10px; /* Adjust the value based on your preferred spacing */
+}
+
+
+.cart-item-price {
+  margin-left: 10px; /* Align the price to the right */
+}
+
+.remove-button {
+  color: #dc3545; /* Red color for the trash can icon */
+}
+
+.remove-button:hover {
+  color: #bd2130; /* Darker red on hover */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Add space between the buttons */
+}
+
+.total-price {
+  color: #333; /* Set the desired font color */
+  margin-top: 10px; /* Add margin for spacing */
+}
