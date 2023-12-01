@@ -123,6 +123,16 @@ const itemData = {
 
     ],
 
+    tempura: [
+      {
+        itemName: "Shrimp Tempura",
+        briefDescri: "6 pieces",
+        imageSrc: "/Tempura/ShrimpTempura.png",
+        price: 12.99,
+        longDescri: "Battered and deep fried",
+      }
+    ],
+
 
     famousDishes: [
       {

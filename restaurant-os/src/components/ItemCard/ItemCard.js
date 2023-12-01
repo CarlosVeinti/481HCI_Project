@@ -7,8 +7,16 @@ import './ItemCard.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addItemToCart, removeItemFromCart } from '../../store/cartActions';
+
 
 function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
+
+  const dispatch = useDispatch();
+
+
+
   const [showModal, setShowModal] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
@@ -17,13 +25,44 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
 
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
+    // for redux
+    dispatch(addItemToCart({
+      itemName,
+      price,
+      quantity: quantity + 1,
+    }));
   };
 
   const decreaseQuantity = () => {
-    if (quantity > 1) {
+    if (quantity > 0) {
       setQuantity(quantity - 1);
+
+    if (quantity - 1 === 0) {
+        handleCloseModal();
+    }
+      
+      // Dispatch removeItemFromCart action
+      dispatch(removeItemFromCart({
+        itemName,
+        price,
+        quantity: quantity - 1,
+      }));
     }
   };
+
+  const handleAddToCart = () => {
+    // Dispatch the addItemToCart action with the item details and quantity
+    dispatch(addItemToCart({
+      itemName,
+      price,
+      quantity,
+    }));
+
+    // Close the modal after adding to cart
+    handleCloseModal();
+  };
+
+
 
   return (
     <Card className='foodItemCard'>

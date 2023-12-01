@@ -12,10 +12,15 @@ const customBackgroundStyle = {
 };
 
 function EditSingleItemPage() {
+
+
+    
+
+
     /*const { itemName, description, imageSrc, price } = location.state*/
     const location = useLocation();
     const { itemName, imageSrc, price, longDescri } = location.state || {};
-    console.log(itemName)
+    //console.log(itemName)
     const  [editMode,setEditMode]= useState(true)
     return (
         <div>

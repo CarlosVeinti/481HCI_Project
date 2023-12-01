@@ -50,6 +50,12 @@ const categories = [
     imageSrc: '/drinks.jpeg',
     linkTo: '/browse-items/beverages',
   },
+  {
+    title: 'Tempura',
+    description: 'Coated in a thin batter and deep fried',
+    imageSrc: '/tempuraCategory.jpeg',
+    linkTo: '/browse-items/tempura'
+  }
 ];
 
 
@@ -90,6 +96,19 @@ function CategoriesPage() {
               </Col>
             ))}
           </Row>
+          <Row className="my-row">
+            {categories.slice(6,7).map((category, index) => (
+              <Col key={index} className="my-col">
+                <CategoryCard
+                  title={category.title}
+                  description={category.description}
+                  imageSrc={category.imageSrc}
+                  linkTo={category.linkTo}
+                />
+              </Col>
+            ))}
+          </Row>
+
 
         </Container>
       </div>

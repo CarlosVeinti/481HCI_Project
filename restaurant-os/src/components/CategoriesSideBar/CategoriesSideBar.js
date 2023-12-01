@@ -58,6 +58,14 @@ function CategoriesSideBar() {
                 </Button>
             </Row>
 
+            <Row className="catSideRows">
+                <Button variant="primary" className='catSide_Btn' onClick={() => handleCategoryClick('tempura')}>
+                    Tempura
+                </Button>
+            </Row>
+
+
+
            
             
 
