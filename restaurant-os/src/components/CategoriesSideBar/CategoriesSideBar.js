@@ -10,7 +10,7 @@ const customBackgroundStyle = {
     backgroundColor: '#fff5ee', // Replace with your desired background color
 };
 
-function CategoriesSideBar() {
+function CategoriesSideBar({ currentCategory }) {
 
     const navigate = useNavigate();
 
@@ -23,43 +23,64 @@ function CategoriesSideBar() {
       <>        
           <Container className='sidebarCategs'>
             <Row className="catSideRows">
-                <Button variant="primary" className='catSide_Btn' onClick={() => handleCategoryClick('appetizers')}>
+                <Button 
+                    variant="primary" 
+                    className={`catSide_Btn ${currentCategory === 'appetizers' ? 'active' : ''}`} 
+                    onClick={() => handleCategoryClick('appetizers')}>
                     Appetizers
                 </Button>
             </Row>
 
             <Row className="catSideRows">
-                <Button variant="primary" className='catSide_Btn' onClick={() => handleCategoryClick('sushi')}>
+                <Button 
+                    variant="primary" 
+                    className={`catSide_Btn ${currentCategory === 'sushi' ? 'active' : ''}`}
+                    onClick={() => handleCategoryClick('sushi')}>
                     Sushi
                 </Button>
             </Row>
 
             <Row className="catSideRows" >
-                <Button variant="primary" className='catSide_Btn' onClick={() => handleCategoryClick('sashimi')}>
+                <Button 
+                    variant="primary" 
+                    className={`catSide_Btn ${currentCategory === 'sashimi' ? 'active' : ''}`} 
+                    onClick={() => handleCategoryClick('sashimi')}>
                     Sashimi
                 </Button>
             </Row>
 
             <Row className="catSideRows">
-                <Button variant="primary" className='catSide_Btn' onClick={() => handleCategoryClick('ramen')}>
+                <Button 
+                    variant="primary" 
+                    className={`catSide_Btn ${currentCategory === 'ramen' ? 'active' : ''}`} 
+                    onClick={() => handleCategoryClick('ramen')}>
                     Ramen
                 </Button>
             </Row>
 
             <Row className="catSideRows">
-                <Button variant="primary" className='catSide_Btn' onClick={() => handleCategoryClick('desserts')}>
+                <Button 
+                variant="primary" 
+                className={`catSide_Btn ${currentCategory === 'desserts' ? 'active' : ''}`}
+                onClick={() => handleCategoryClick('desserts')}>
                     Desserts
                 </Button>
             </Row>
 
             <Row className="catSideRows">
-                <Button variant="primary" className='catSide_Btn' onClick={() => handleCategoryClick('beverages')}>
+                <Button 
+                variant="primary" 
+                className={`catSide_Btn ${currentCategory === 'beverages' ? 'active' : ''}`}
+                onClick={() => handleCategoryClick('beverages')}>
                     Beverages
                 </Button>
             </Row>
 
             <Row className="catSideRows">
-                <Button variant="primary" className='catSide_Btn' onClick={() => handleCategoryClick('tempura')}>
+                <Button 
+                variant="primary" 
+                className={`catSide_Btn ${currentCategory === 'tempura' ? 'active' : ''}`}
+                onClick={() => handleCategoryClick('tempura')}>
                     Tempura
                 </Button>
             </Row>

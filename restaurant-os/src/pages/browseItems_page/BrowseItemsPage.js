@@ -34,7 +34,7 @@ function BrowseItemsPage() {
         </div>
 
         <NavigationHeader/>
-        <CategoriesSideBar/>     
+        <CategoriesSideBar currentCategory={category}/>     
         <div className="browseItemsClass">
                    
             
