@@ -11,7 +11,7 @@
 }
 
 .cart-container {
-    max-width: 800px; /* Set a max-width for the entire container */
+    max-width: 2000px; /* Set a max-width for the entire container */
     margin: 0 auto;
     padding: 20px;
   }
@@ -22,8 +22,9 @@
   
   .cart-items {
     margin-top: 20px;
-    max-height: 700px; /* Set a fixed height for the container */
+    height: 55vh; /* Set a fixed height for the container */
     overflow-y: auto; /* Enable vertical scrollbar if needed */
+    width: 800px;
   }
   
   .cart-item {
@@ -84,7 +85,7 @@
     color: #bd2130; /* Darker red on hover */
   }
 
-  .button-container {
+  .returnsubmitbutton-container {
     display: flex;
     justify-content: space-between; /* Add space between the buttons */
   }
