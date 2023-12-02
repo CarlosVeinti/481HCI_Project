@@ -7,6 +7,7 @@ import NavigationHeader from '../../components/NavigationHeader/NavigationHeader
 import './WaiterPage.css';
 import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch'; // Adjust the import path based on your project structure
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const customBackgroundStyle = {
@@ -17,6 +18,7 @@ const customBackgroundStyle2 = {
 };
 
 function TopLeftButton() {
+    const navigate = useNavigate();
     const buttonStyle = {
         position: 'absolute',
         top: '10px',
@@ -25,12 +27,13 @@ function TopLeftButton() {
 
     return (
         <div style={buttonStyle}>
-            <Button variant="primary">Tables</Button>
+            <Button variant="primary" onClick={() => navigate("/table")}>Tables</Button>
         </div>
     );
 }
 
 function TopRightButton() {
+    const navigate = useNavigate();
     const buttonStyle = {
         position: 'absolute',
         top: '10px',
@@ -39,7 +42,7 @@ function TopRightButton() {
 
     return (
         <div style={buttonStyle}>
-            <Button variant="primary">Order History</Button>
+            <Button variant="primary" onClick={() => navigate("/history")}>Order History</Button>
             
         </div>
     );
