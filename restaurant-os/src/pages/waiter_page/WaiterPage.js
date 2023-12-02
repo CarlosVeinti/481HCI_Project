@@ -69,8 +69,8 @@ function WaiterPage() {
     const [activeOrders, setActiveOrders] = useState([
         { id: 1, item: 'Uptown Ramen', quantity: 1, desc: 'Remove pork' },
         { id: 2, item: 'Salmon Sushi', quantity: 1, desc: '' },
-        { id: 3, item: 'California Rolls', quantity: 3, desc: '' },
-        { id: 4, item: 'Rainbow Rolls', quantity: 3, desc: '' },
+        { id: 3, item: 'California Roll', quantity: 3, desc: '' },
+        { id: 4, item: 'Rainbow Roll', quantity: 3, desc: '' },
         { id: 5, item: 'Okonomiyaki', quantity: 3, desc: '' },
         { id: 6, item: 'Miso Soup', quantity: 3, desc: '' },
         { id: 7, item: 'Mango Rolls', quantity: 3, desc: '' },
