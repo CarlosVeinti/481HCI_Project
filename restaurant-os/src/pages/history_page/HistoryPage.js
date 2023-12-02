@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+
 
 import './HistoryPage.css';
 
@@ -11,6 +13,7 @@ const customBackgroundStyle2 = {
 };
 
 function TopLeftButton() {
+    const navigate = useNavigate();
     const buttonStyle = {
         position: 'absolute',
         top: '10px',
@@ -19,7 +22,7 @@ function TopLeftButton() {
 
     return (
         <div style={buttonStyle}>
-            <Button variant="primary">Active Orders</Button>
+            <Button variant="primary" onClick={() => navigate("/waiter")}>Active Orders</Button>
         </div>
     );
 }
