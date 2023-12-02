@@ -6,6 +6,8 @@ import Image from 'react-bootstrap/Image';
 import './NavigationHeader.css'; // Import your custom styles
 import { useNavigate } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa'; // Replace with the desired icon
+import { FaArrowLeft } from 'react-icons/fa'; // Replace with the desired icon
+import { FaReceipt } from "react-icons/fa";
 
 
 function NavigationHeader() {
@@ -23,9 +25,13 @@ function NavigationHeader() {
               variant="primary" 
               className="navbarButtons" 
               onClick={() => navigate(-1)}>
-                Back
+                <FaArrowLeft size={30}/>  Back
             </Button>
-            <Button variant="primary" className="navbarButtons">Request Bill</Button>
+            <Button 
+              variant="primary" 
+              className="navbarButtons">
+                <FaReceipt size={30}/> Request Bill
+            </Button>
 
             <Navbar.Brand className="customNavbarBrand">
               <Image
@@ -44,7 +50,7 @@ function NavigationHeader() {
               variant="primary" 
               className="navbarButtons"
               onClick={() => navigate("/cart")} >
-                <FaShoppingCart size={30}/>
+                <FaShoppingCart size={30}/> Cart
             </Button>
           </div>
         </Navbar.Collapse>
