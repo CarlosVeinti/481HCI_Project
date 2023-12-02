@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'react-bootstrap/Image';
 import './NavigationHeader.css'; // Import your custom styles
 import { useNavigate } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa'; // Replace with the desired icon
 
 
 function NavigationHeader() {
@@ -18,7 +19,12 @@ function NavigationHeader() {
         <Navbar.Collapse id="basic-navbar-nav">
           <div className="navbarButtonsContainer">
             {/* Your navigation links go here */}
-            <Button variant="primary" className="navbarButtons" onClick={() => navigate(-1)}>Back</Button>
+            <Button 
+              variant="primary" 
+              className="navbarButtons" 
+              onClick={() => navigate(-1)}>
+                Back
+            </Button>
             <Button variant="primary" className="navbarButtons">Request Bill</Button>
 
             <Navbar.Brand className="customNavbarBrand">
@@ -36,7 +42,10 @@ function NavigationHeader() {
             <Button variant="primary" className="navbarButtons">Call Waiter</Button>
             <Button 
               variant="primary" 
-              className="navbarButtons" onClick={() => navigate("/cart")} >View Cart</Button>
+              className="navbarButtons"
+              onClick={() => navigate("/cart")} >
+                <FaShoppingCart size={30}/>
+            </Button>
           </div>
         </Navbar.Collapse>
 
