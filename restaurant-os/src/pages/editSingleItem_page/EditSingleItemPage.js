@@ -5,15 +5,27 @@ import './EditSingleItemPage.css';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import BackButton from '../../components/BackButton/BackButton';
 import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import itemData from '../browseItems_page/Data_Items_Structures';
 
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee',
 };
 
 function EditSingleItemPage() {
+    const { itemName: urlItemName } = useParams(); // This will get the itemName from the URL
+    const decodedItemName = decodeURIComponent(urlItemName); // Decoding the URL-encoded itemName
+    // Find the item data based on itemName from the URL
+    const item = Object.values(itemData).flat().find(i => i.itemName === decodedItemName);
+
     const location = useLocation();
     const { itemName, imageSrc, price, longDescri } = location.state || {};
     const [editMode, setEditMode] = useState(true);
+
+    const initialIngredientSelections = item.ingredients.reduce((acc, ingredient) => {
+        acc[ingredient] = 'regular'; // Initialize all as 'regular'
+        return acc;
+    }, {});
 
     const [ingredientSelections, setIngredientSelections] = useState({
         ingredient1: 'regular',
@@ -80,47 +92,21 @@ function EditSingleItemPage() {
                 </div>
 
                 <div className="ingredients-box">
-                    {editMode &&
-                        <ul>
-                            <li>
-                                <div className="ingredient-name">Noodles</div>
-                                <div className="action-buttons">
+            {editMode && item && item.ingredients && (
+                <ul>
+                    {item.ingredients.map((ingredient, index) => (
+                        <li key={index}>
+                            <div className="ingredient-name">{ingredient}</div>
+                            <div className="action-buttons">
                                 <IngredientButtonGroup 
-                                    groupId="ingredient1" 
+                                    groupId={`ingredient${index + 1}`} // Unique ID for each ingredient
                                     onSelect={handleSelectionChange}
                                 />
-                                </div>
-                                <div className="ingredient-name">Protein</div>
-                                <div className="action-buttons">
-                                <IngredientButtonGroup 
-                                    groupId="ingredient2" 
-                                    onSelect={handleSelectionChange}
-                                />
-                                </div>
-                                <div className="ingredient-name">Mushroom</div>
-                                <div className="action-buttons">
-                                <IngredientButtonGroup 
-                                    groupId="ingredient3" 
-                                    onSelect={handleSelectionChange}
-                                />
-                                </div>
-                                <div className="ingredient-name">Egg</div>
-                                <div className="action-buttons">
-                                <IngredientButtonGroup 
-                                    groupId="ingredient4" 
-                                    onSelect={handleSelectionChange}
-                                />
-                                </div>
-                                <div className="ingredient-name">Green Scallion</div>
-                                <div className="action-buttons">
-                                <IngredientButtonGroup 
-                                    groupId="ingredient5" 
-                                    onSelect={handleSelectionChange}
-                                />
-                                </div>
-                            </li>
-                        </ul>
-                    }
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            )}
                     <div className="add-to-cart-section">
                         <ServingCounter onServingChange={handleServingChange} />
                         <button className="add-to-cart-btn">Add to Cart</button>

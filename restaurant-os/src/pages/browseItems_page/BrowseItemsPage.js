@@ -9,6 +9,7 @@ import './BrowseItemsPage.css'
 import { Container } from 'react-bootstrap';
 import itemData from './Data_Items_Structures';
 import { useLocation } from 'react-router-dom'; // Import useLocation
+import { Link } from 'react-router-dom';
 
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee', // Replace with your desired background color
@@ -46,6 +47,7 @@ function BrowseItemsPage() {
                         <Row key={rowIndex} className="my_bip_row">
                             {row.map((item, colIndex) => (
                                 <Col key={colIndex} className="my_bip_col">
+                                <Link to={`/edit-single-item/${encodeURIComponent(item.itemName)}`}>
                                     <ItemCard
                                         itemName={item.itemName}
                                         briefDescri={item.briefDescri}
@@ -53,6 +55,7 @@ function BrowseItemsPage() {
                                         price={item.price}
                                         longDescri={item.longDescri}
                                     />
+                                </Link>
                                 </Col>
                             ))}
                         </Row>
