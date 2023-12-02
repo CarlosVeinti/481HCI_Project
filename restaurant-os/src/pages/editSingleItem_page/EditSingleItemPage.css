@@ -1,10 +1,17 @@
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0; 
+    background-color: rgb(255, 245, 238); 
+}
+
 .nav_Header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFFFFF; /* White background color */
-    font-family: 'Arial', sans-serif; /* Sample font; you can replace this with any font of your choice */
-    height: 100vh; /* Occupy full viewport height */
+    background-color: rgb(255, 255, 255); 
+    font-family: 'Arial', sans-serif; 
+    height: 200vh; 
     padding: 20px;
     box-sizing: border-box;
     z-index: 1;
@@ -13,34 +20,33 @@
 
 
 .image-container {
-    width: 35vw;        /* set the desired width */
-    height: 40vh;       /* set the desired height */
-    background-color: #f0f0f0;  /* set a background color */
-    margin: auto;        /* centers the container horizontally */
+    width: 35vw;        
+    height: 40vh;       
+    background-color: #ffffff;  
+    margin: auto;       
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin: 0 20px;
-    margin-top: 5vh;    /* add top margin to push container down */
+    margin-top: 5vh; 
     position: relative;
 
     border: 1px solid black;
 }
 
 .content-container {
-    display: flex;          /* Use flexbox for layout */
+    display: flex;       
     justify-content: center; 
     align-items: top;    
-    height: 50vh;          /* Take full height of parent container */
+    height: 50vh;          
     z-index: 1;
 }
 
 .image-container img {
-    
-    width: 100%;       /* make the image take the full width of its container */
-    height: 100%;      /* make the image take the full height of its container */
-    object-fit: cover; /* crop the image to cover the entire element, while preserving its aspect ratio */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
     display: block;
     margin: auto;
 }
@@ -48,36 +54,36 @@
 .item-name, .item-price {
     position: absolute; 
     bottom: 10px;       
-    padding: 10px 15px;       /* Increased padding for bigger boxes */
+    padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.7); 
     color: white;       
     border-radius: 5px;
-    font-size: 30px;          /* Increase font size for bigger text */
-    width: 150px;             /* Optionally, set a fixed width */
-    text-align: center;       /* Center the text within the boxes */
+    font-size: 30px; 
+    width: 150px;             
+    text-align: center;       
     z-index: 1;
 }
 
 .item-name {
-    left: 10px; /* Positioned 10px from the left edge of the .image-container */
+    left: 10px; 
     z-index: 1;
 }
 
 .item-price {
-    right: 10px; /* Positioned 10px from the right edge of the .image-container */
+    right: 10px; 
     z-index: 1;
 }
 
 .description-container {
-    padding: 20px;          /* Padding for space inside the description container */
-    background-color: orange; /* Optional background color */
+    padding: 20px;
+    background-color: rgb(41, 175, 193); 
     border-radius: 15px;
     margin-top: 55px;
     width: 40vw;
-    height: 38vh;
+    height: 40vh;
     display: inline-block;
     z-index: 1;
-    font-size: 5px; /* Adjust the value as needed */
+    font-size: 5px;
 }
 
 .description-container p{
@@ -89,23 +95,53 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     font-size: 30px;
+    margin-top: 20px;
+    width: 100%;
     z-index: 1;
 }
 
 .ingredients-box li {
     display: flex;
-    align-items: center; /* This ensures the text and buttons are vertically centered */
+    align-items: center; 
+    flex-direction: column;
+    width: 100%; 
+    justify-content: space-between; 
     padding-bottom: 10px;
-    gap: 10px; /* Optional: This will add some spacing between the text and the buttons */
     z-index: 1;
 }
 
-.ingredients-box ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0;
-    margin: 0;
+.ingredient-name {
+    flex-grow: 1; 
+    text-align: left; 
+    padding-right: 10px;
+}
+
+.ingredient-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
     z-index: 1;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+
+.add-to-cart-section {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    width: 100%; 
+    margin-top: 20px;
+}
+
+.ingredients-box ul {
+    list-style-type: none; 
+    padding: 0;
+    margin-left: 20vw;
+    z-index: 1;
+
 }
 
 .action-buttons button {
@@ -117,31 +153,15 @@
 .ingredient-button-group {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align children to the top of the container */
-}
-
-.ingredient-action {
-    margin: 0 5px;
-    z-index: 1;
-    background-color: aliceblue;
-    border-radius: 50%;
-}
-
-.ingredient-name {
-    width: 300px; /* Adjust this value as needed */
-    text-align: right;
-    padding-right: 10px; /* Some spacing between the text and the buttons */
-    z-index: 1;
-    font-weight: bold;
-    color: black;
+    align-items: flex-start; 
 }
 
 .add-to-cart-section {
     margin-left: 140px;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
     width: 100%;
     z-index: 1;
 }
@@ -157,9 +177,9 @@
 .add-to-cart-section button {
     background-color: #0d6efd;
     color: white;
-    padding: auto auto;  /* Bigger padding for bigger button */
+    padding: auto auto;  
     border-radius: 50px;
-    font-size: 20px;     /* Bigger font */
+    font-size: 20px;     
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -167,21 +187,18 @@
 }
 
 .add-to-cart-section button:hover {
-    background-color: darkred;
+    background-color: rgb(5, 0, 139);
     z-index: 1;
 }
 
 .background_image {
+    min-height: 150vh; 
     background-image: url('/public/background.png');
-    width: 100%;
-    height: 100%;
-    position: fixed;
     background-size: cover;
     background-attachment: fixed;
-    z-index: 0;
-    opacity: 0.5;
-    
     background-repeat: no-repeat;
     background-position: center;
-    
+    opacity: 0.5;
+    position: relative; 
+    z-index: 0;
 }
