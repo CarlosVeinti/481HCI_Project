@@ -35,7 +35,7 @@ const categories = [
   {
     title: 'Ramen',
     description: 'Slurp-worthy goodness.',
-    imageSrc: '/noodles.jpeg',
+    imageSrc: '/CreamySpicyMisoRamen.webp',
     linkTo: '/browse-items/ramen',
   },
   {
