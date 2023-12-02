@@ -1,44 +1,41 @@
 import React, { useState } from 'react';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import './ToggleButtons.css';
 
-function IngredientButtonGroup({ groupId }) {
-  const [radioValue, setRadioValue] = useState('');  // Default none selected
+function IngredientButtonGroup({ groupId, onSelect }) {
+  const [radioValue, setRadioValue] = useState('regular');  
 
   const radios = [
     { name: 'Remove', value: 'remove' },
-    { name: 'Regular', value: 'regular'},
-    { name: 'Double', value: 'double' },
-    { name: 'Triple', value: 'triple' },
+    { name: 'Regular', value: 'regular' },
+    { name: 'Double', value: 'double', price: '2.00' },
+    { name: 'Triple', value: 'triple', price: '3.00' },
   ];
 
   const handleButtonClick = (e) => {
-    // If the clicked button's value matches the currently selected value
-    if (e.currentTarget.value === radioValue) {
-      // Set to empty string to unselect the button
-      setRadioValue('');
-    } else {
-      // Otherwise, set to the clicked button's value
-      setRadioValue(e.currentTarget.value);
-    }
-  };
+    const newValue = e.currentTarget.value;
+    setRadioValue(newValue);
+    onSelect(groupId, newValue);
+};
 
   return (
-    <div className="ingredient-button-group">  {/* wrapping div to apply custom styles if needed */}
+    <div className="ingredient-button-group">
       {radios.map((radio, idx) => (
-        <div className="ingredient-action" key={idx}>  {/* wrapper div for each button */}
+        <div className="ingredient-action" key={idx}>
           <ToggleButton
             id={`food-${idx}-${groupId}`}
             type="radio"
             variant="outline-primary"
-            name={`food-${groupId}`}   // make each group's name attribute unique
+            name={`food-${groupId}`}
             value={radio.value}
             checked={radioValue === radio.value}
-            onChange={handleButtonClick}  // Use the custom handler here
-            style={{ borderRadius: '50%', width: '90px', height: '90px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            onChange={handleButtonClick}
+            style={{ borderRadius: '50%', width: '90px', height: '90px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
           >
-            {radio.name}
+            <div>{radio.name}</div>
+            {(radio.value === 'double' || radio.value === 'triple') && (
+              <div style={{ fontSize: '0.75em' }}>${radio.price}</div>
+            )}
           </ToggleButton>
         </div>
       ))}
