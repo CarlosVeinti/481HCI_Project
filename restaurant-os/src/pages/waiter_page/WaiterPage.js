@@ -66,28 +66,32 @@ function WaiterPage() {
         backgroundColor: '#FFFFFF',
     };
 
-    const orders = [
-        { id: 1, item: 'Spicy Tuna', quantity: 2, date: '2023-10-31 10pm' },
-        { id: 2, item: 'Salmon Sushi', quantity: 1, date: '2023-10-30' },
-        { id: 3, item: 'California Rolls', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Rainbow Rolls', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Okonomiyaki', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Miso Soup', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Mango Rolls', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Chicken Skewers', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Tempura Vegetables', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Fried Rice', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Spring Rolls', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Vegetable Rolls', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Beef Skewers', quantity: 3, date: '2023-10-29' },
+    const [activeOrders, setActiveOrders] = useState([
+        { id: 1, item: 'Uptown Ramen', quantity: 1, desc: 'Remove pork' },
+        { id: 2, item: 'Salmon Sushi', quantity: 1, desc: '' },
+        { id: 3, item: 'California Roll', quantity: 3, desc: '' },
+        { id: 4, item: 'Rainbow Roll', quantity: 3, desc: '' },
+        { id: 5, item: 'Okonomiyaki', quantity: 3, desc: '' },
+        { id: 6, item: 'Miso Soup', quantity: 3, desc: '' },
+        { id: 7, item: 'Mango Rolls', quantity: 3, desc: '' },
+        { id: 8, item: 'Chicken Skewers', quantity: 3, desc: '' },
+        { id: 9, item: 'Tempura Vegetables', quantity: 3, desc: '' },
+        { id: 10, item: 'Fried Rice', quantity: 3, desc: '' },
+        { id: 11, item: 'Spring Rolls', quantity: 3, desc: '' },
+        { id: 12, item: 'Vegetable Rolls', quantity: 3, desc: '' },
+        { id: 13, item: 'Beef Skewers', quantity: 3, desc: '' },
    
 
 
-    ];
-    const handleItemClick = (item) => {
-        // Handle the click on the item here
-        console.log(`Item clicked: ${item}`);
-    };
+    ]);
+
+    const handleMarkAsCompleted = (orderId) => {
+        const orderIndex = activeOrders.findIndex(order => order.id === orderId);
+        if (orderIndex !== -1) {
+            const updatedOrders = activeOrders.filter(order => order.id !== orderId);
+            setActiveOrders(updatedOrders);
+        }
+    }
 
     return (
         <div className="parent" >
@@ -104,32 +108,24 @@ function WaiterPage() {
                 <table className="order-preview" style={{ ...customBackgroundStyle2, width: '100%' }}>
                     <thead>
                         <tr>
-                            <th style={{ width: '10%' }}>Number</th>
+                            <th style={{ width: '10%' }}>Item Number</th>
                             <th style={{ width: '1000px' }}>Item</th>
                             <th style={{ width: '10%' }}>Quantity</th>
-                            <th style={{ width: '30%' }}>Date</th>
-                            <th style={{ width: '5%' }}>Action</th>
+                            <th style={{ width: '30%' }}>Special Instructions</th>
+                            <th style={{ width: '10%' }}>Mark as Completed</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {orders.map((order, index) => (
+                        {activeOrders.map((order, index) => (
                             <tr key={order.id}>
-                                <td>{index + 1}</td>
+                                <td>{order.id}</td>
                                 <td>
-                                    <a
-                                        href="#"
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            handleItemClick(order.item);
-                                        }}
-                                    >
-                                        {order.item}
-                                    </a>
+                                    {order.item}
                                 </td>
                                 <td>{order.quantity}</td>
-                                <td>{order.date}</td>
+                                <td>{order.desc}</td>
                                 <td>
-                                    <button className="cancel-button">Cancel</button>
+                                    <button className="complete-button" onClick={() => handleMarkAsCompleted(order.id)}>✓ Completed</button>
                                 </td>
                             </tr>
                         ))}

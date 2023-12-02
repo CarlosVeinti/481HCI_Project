@@ -27,6 +27,22 @@ function TopLeftButton() {
     );
 }
 
+function TopRightButton() {
+    const navigate = useNavigate();
+    const buttonStyle = {
+        position: 'absolute',
+        top: '10px',
+        right: '10px',
+    };
+
+    return (
+        <div style={buttonStyle}>
+            <Button variant="primary" onClick={() => navigate("/table")}>Tables</Button>
+            
+        </div>
+    );
+}
+
 
 function WaiterPage() {
     const customBackgroundStyle = {
@@ -41,15 +57,15 @@ function WaiterPage() {
     };
 
     const orders = [
-        { id: 1, item: 'Spicy Tuna', quantity: 2, date: '2023-10-31 10pm' },
-        { id: 2, item: 'Salmon Sushi', quantity: 1, date: '2023-10-30' },
-        { id: 3, item: 'California Rolls', quantity: 3, date: '2023-10-29' },
-        { id: 3, item: 'Rainbow Rolls', quantity: 1, date: '2023-10-29' },
-        { id: 3, item: 'Okonomiyaki', quantity: 4, date: '2023-10-29' },
-        { id: 3, item: 'Miso Soup', quantity: 5, date: '2023-10-29' },
-        { id: 3, item: 'Yakitori', quantity: 9, date: '2023-10-29' },
-        { id: 3, item: 'Udon', quantity: 2, date: '2023-10-29' },
-        { id: 3, item: 'Takoyaki', quantity: 7, date: '2023-10-29' },
+        { id: 1, item: 'Uptown Ramen', quantity: 1, desc: 'Remove pork' },
+        { id: 2, item: 'Salmon Sushi', quantity: 1, desc: '' },
+        { id: 3, item: 'California Roll', quantity: 3, desc: '' },
+        { id: 3, item: 'Rainbow Roll', quantity: 1, desc: '' },
+        { id: 3, item: 'Okonomiyaki', quantity: 4, desc: '' },
+        { id: 3, item: 'Miso Soup', quantity: 5, desc: '' },
+        { id: 3, item: 'Yakitori', quantity: 9, desc: '' },
+        { id: 3, item: 'Udon', quantity: 2, desc: '' },
+        { id: 3, item: 'Takoyaki', quantity: 7, desc: '' },
 
     ];
     const handleItemClick = (item) => {
@@ -61,7 +77,8 @@ function WaiterPage() {
     <div className="parent" >
         
         <TopLeftButton />
-        
+        <TopRightButton/>
+
         <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center', fontWeight: 'bold', color: 'black' }}>Order History</h1>
 
         <h2 className="tableNumber" style={{ margin: 0, fontSize: '32px', textAlign: 'center', color: 'black' }}> Table 1 History of Orders</h2>
@@ -77,7 +94,7 @@ function WaiterPage() {
                             <th style={{ width: '10%' }}>Number</th>
                             <th style={{ width: '1000px' }}>Item</th>
                             <th style={{ width: '10%' }}>Quantity</th>
-                            <th style={{ width: '30%' }}>Date</th>
+                            <th style={{ width: '30%' }}>Special Instructions</th>
                         </tr>
                     </thead>
                     <tbody >
@@ -85,18 +102,10 @@ function WaiterPage() {
                             <tr key={order.id} style={{ height: '60px' }} >
                                 <td>{index + 1}</td>
                                 <td>
-                                    <a
-                                        href="#"
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            handleItemClick(order.item);
-                                        }}
-                                    >
-                                        {order.item}
-                                    </a>
+                                    {order.item}
                                 </td>
                                 <td>{order.quantity}</td>
-                                <td>{order.date}</td>
+                                <td>{order.desc}</td>
                             </tr>
                         ))}
                     </tbody>
