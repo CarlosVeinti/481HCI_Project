@@ -3,7 +3,7 @@
     background-size: cover; /* You can adjust this property based on your image size preferences */
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 4%;
+    /*padding-bottom: 4%; */
 }
 
 
@@ -40,12 +40,14 @@
 }
 
 /* Style for the cancel button */
-.cancel-button {
-    background-color: #ff0000;
+.complete-button {
+    background-color: #00cc00;
     color: #fff;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Add a bottom border to separate each item */
