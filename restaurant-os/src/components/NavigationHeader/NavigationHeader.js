@@ -12,28 +12,38 @@ function NavigationHeader() {
   const [showCallWaiterModal, setShowCallWaiterModal] = useState(false);
   const [showRequestBillModal, setShowRequestBillModal] = useState(false);
   const [showHowManyBillsModal, setShowHowManyBillsModal] = useState(false);
-
+  const [numberOfBills, setNumberOfBills] = useState(1);
+  const [splitBillRequested, setSplitBillRequested] = useState(false);
 
   const handleCallWaiterClick = () => setShowCallWaiterModal(true);
   const handleRequestBillClick = () => setShowRequestBillModal(true);
-  const handleHowManyBillsClick = () => setShowHowManyBillsModal(true);
+  const handleHowManyBillsClick = () => {
+    setShowHowManyBillsModal(true);
+    setSplitBillRequested(true);
+  };
 
-  
+  const handleDecreaseBills = () => setNumberOfBills((prevCount) => (prevCount > 1 ? prevCount - 1 : prevCount));
+  const handleIncreaseBills = () => setNumberOfBills((prevCount) => prevCount + 1);
 
   const handleCloseModals = () => {
     setShowCallWaiterModal(false);
     setShowRequestBillModal(false);
     setShowHowManyBillsModal(false);
-    // Reset splitBill state when closing modals
-    
-  
+    setNumberOfBills(1);
+    setSplitBillRequested(false);
   };
- 
+
+  const handleOkButtonClick = () => {
+    // Add any additional logic you want to execute before closing the modal
+    handleCloseModals(); // Close the modal
+  };
+
   const handleNumberOfBillsChange = (event) => {
     const enteredValue = event.target.value;
     if (/^[1-9]\d*$/.test(enteredValue) || enteredValue === '') {
+      setNumberOfBills(Number(enteredValue));
     }
-  };  
+  };
 
   const navigate = useNavigate();
 
@@ -70,25 +80,9 @@ function NavigationHeader() {
         </Modal.Header>
         <Modal.Body>
           <p style={{ color: 'black' }}>A waiter will be with you shortly.</p>
-        </Modal.Body>
-      </Modal>
-
-      {/* Modal for How Many Bills */}
-      <Modal show={showHowManyBillsModal} onHide={handleCloseModals}>
-        <Modal.Header closeButton>
-          <Modal.Title>Split Bill</Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="text-center">
-          <p style={{ color: 'black' }}>How many bills do you need?</p>
-          <input
-            type="number"
-            className="form-control mb-3"
-            placeholder="Enter number of bills"
-            onChange={handleNumberOfBillsChange}
-          />
-          <div className="d-flex justify-content-center">
-            <Button variant="primary" onClick={handleCallWaiterClick}>
-              Submit
+          <div className="d-flex justify-content-center mt-3">
+            <Button variant="success" onClick={handleOkButtonClick}>
+              Ok
             </Button>
           </div>
         </Modal.Body>
@@ -100,7 +94,7 @@ function NavigationHeader() {
           <Modal.Title>Request Bill</Modal.Title>
         </Modal.Header>
         <Modal.Body className="text-center">
-        <p style={{ color: 'black' }}>Would you want to split the bill?</p>
+          <p style={{ color: 'black' }}>Would you want to split the bill?</p>
           <div className="d-flex justify-content-center mb-3">
             <Button variant="success" onClick={handleHowManyBillsClick}>
               Yes
@@ -110,10 +104,32 @@ function NavigationHeader() {
               No
             </Button>
           </div>
+          {splitBillRequested && (
+            <div>
+              {/* Render the content of the "How Many Bills" modal here */}
+              <p style={{ color: 'black' }}>Total bill should be split into these many bills:</p>
+              <div className="d-flex justify-content-center">
+                <Button variant="primary" onClick={handleDecreaseBills} style={{ fontSize: '20px', minWidth: '80px' }}>
+                  -
+                </Button>
+                <input
+                  className="form-control mx-2 center-value"
+                  value={numberOfBills}
+                  onChange={handleNumberOfBillsChange}
+                />
+                <Button variant="primary" onClick={handleIncreaseBills} style={{ fontSize: '20px', minWidth: '80px' }}>
+                  +
+                </Button>
+              </div>
+              <div className="d-flex justify-content-center mt-3">
+                <Button variant="primary" onClick={handleCallWaiterClick}>
+                  Submit
+                </Button>
+              </div>
+            </div>
+          )}
         </Modal.Body>
       </Modal>
-
-
     </>
   );
 }
