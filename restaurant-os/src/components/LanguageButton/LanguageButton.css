@@ -13,3 +13,15 @@
     padding: 24px;
     background-color: orange;
 };
+
+/* New styles for grid layout */
+.modal-body {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));  /* Adjust the column width as needed */
+  }
+  
+  /* Additional styling for the language buttons within the grid */
+  .modal-body .language-button {
+    width: 100%;   /* Make the language buttons fill the grid cell */
+  }
