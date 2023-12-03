@@ -5,88 +5,42 @@ import './CartPage.css';
 import { FaTrash } from 'react-icons/fa'; // Import the trash can icon
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { MyContext } from '../../context';
 
 
 function CartPage() {
     const navigate = useNavigate();
+    const { cartItems, updateCart,removeFromCart } = useContext(MyContext);
     // Currently hard coded to show cart page
-    const [cartItems, setCartItems] = useState([
-        {
-            itemName: "Uptown Ramen",
-            description: "Remove pork",
-            quantity: 1,
-            price: 16.0,
-            imageSrc: "/uptownramen.jpg"
-        },
-        {
-            itemName: "California Roll",
-            description: "",
-            quantity: 1,
-            price: 10.0,
-            imageSrc: "/californiaroll.jpg"
-        },
-        {
-            itemName: "Dynamite Roll",
-            description: "",
-            quantity: 1,
-            price: 11.0,
-            imageSrc: "/dynamiteroll.jpg"
-        },
-        {
-            itemName: "Kappa Maki (6pcs)",
-            description: "",
-            quantity: 2,
-            price: 6.0,
-            imageSrc: "/kappamaki.jpeg"
-        },
-        {
-            itemName: "Matcha Cheesecake",
-            description: "",
-            quantity: 1,
-            price: 6.0,
-            imageSrc: "/desert.png"
-        },
-        {
-            itemName: "Philadelphia Roll",
-            description: "Extra avocado",
-            quantity: 1,
-            price: 12.0,
-            imageSrc: "/californiaroll.jpg"
-        },
-        {
-            itemName: "Tempura Udon",
-            description: "",
-            quantity: 1,
-            price: 14.0,
-            imageSrc: "/tempuraudon.jpg"
-        }
-    ]);
-
-    const [quantity, setQuantity] = useState(1);
+    console.log("Cart items:", cartItems);
+    const [servings, setservings] = useState(1);
 
     const calculateTotalPrice = () => {
-        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+        return cartItems.reduce((total, item) => total + item.totalPrice * 1, 0).toFixed(2);
     }
 
-    const removeFromCart = (itemName) => {
-        setCartItems((prevItems) => prevItems.filter((item) => item.itemName !== itemName));
+    const LocalremoveFromCart = (itemName) => {
+        removeFromCart(itemName)
     }
 
   const increaseQuantity = (itemName) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item.itemName === itemName ? { ...item, quantity: item.quantity + 1 } : item
-      )
+
+   
+    updateCart(
+        cartItems.map((item) =>{
+            return item.itemName === itemName ? { ...item, servings: item.servings + 1,price: item.price, totalPrice: item.totalPrice + (item.price) } : item
+          }
+        )
     );
   };
 
   const decreaseQuantity = (itemName) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item.itemName === itemName && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
+    updateCart(
+        cartItems.map((item) =>{
+            return item.itemName === itemName ? { ...item, servings: item.servings -1,price: item.price, totalPrice: item.totalPrice - (item.price) } : item
+          }
+        )
     );
   };
       
@@ -100,7 +54,7 @@ function CartPage() {
                 <CartItem 
                     key={item.itemName} 
                     item={item} 
-                    removeFromCart={removeFromCart} 
+                    removeFromCart={LocalremoveFromCart} 
                     increaseQuantity={increaseQuantity}
                     decreaseQuantity={decreaseQuantity}
                     />

@@ -7,12 +7,16 @@ import BackButton from '../../components/BackButton/BackButton';
 import { useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import itemData from '../browseItems_page/Data_Items_Structures';
+import { useContext } from 'react';
+import { MyContext } from '../../context';
 
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee',
 };
 
 function EditSingleItemPage() {
+    const { addToCart } = useContext(MyContext);
+
     const { itemName: urlItemName } = useParams(); // This will get the itemName from the URL
     const decodedItemName = decodeURIComponent(urlItemName); // Decoding the URL-encoded itemName
     // Find the item data based on itemName from the URL
@@ -74,6 +78,19 @@ function EditSingleItemPage() {
         return totalPrice;
     };
 
+    const handleAddToCart = () => {
+        const itemToAdd = {
+            itemName,
+            price,
+            imageSrc,
+            ingredientSelections,
+            servings,
+            totalPrice: calculateTotalPrice()
+        };
+        addToCart(itemToAdd);
+        console.log('Item added to cart:', itemToAdd);  // For debugging
+    };
+
     return (
         <div>
             <div className="nav_Header" style={customBackgroundStyle}>
@@ -109,7 +126,7 @@ function EditSingleItemPage() {
             )}
                     <div className="add-to-cart-section">
                         <ServingCounter onServingChange={handleServingChange} />
-                        <button className="add-to-cart-btn">Add to Cart</button>
+                        <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
                         <div className="total-price">
                             Total Price: ${calculateTotalPrice().toFixed(2)}
                         </div>

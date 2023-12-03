@@ -4,6 +4,7 @@ import './CartItem.css';
 
 function CartItem({ item, removeFromCart, increaseQuantity, decreaseQuantity }) {
   const { itemName, description, quantity, price, imageSrc } = item;
+  console.log("Item:", item);
   return (
     <div className="cart-item">
       <div className="item-details">
@@ -18,7 +19,7 @@ function CartItem({ item, removeFromCart, increaseQuantity, decreaseQuantity }) 
         <span>{item.quantity}</span>
         <button className="btn btn-outline-secondary" onClick={() => increaseQuantity(itemName)}>+</button>
       </div>
-      <span className="cart-item-price">${(item.price * item.quantity).toFixed(2)}</span>
+      <span className="cart-item-price">${(item.totalPrice ).toFixed(2)}</span>
       <button className="btn btn-link remove-button" onClick={() => removeFromCart(item.itemName)}>
         <FaTrash />
       </button>
