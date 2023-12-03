@@ -11,15 +11,29 @@ import { FaShoppingCart, FaArrowLeft, FaReceipt } from 'react-icons/fa';
 function NavigationHeader() {
   const [showCallWaiterModal, setShowCallWaiterModal] = useState(false);
   const [showRequestBillModal, setShowRequestBillModal] = useState(false);
+  const [showHowManyBillsModal, setShowHowManyBillsModal] = useState(false);
+
 
   const handleCallWaiterClick = () => setShowCallWaiterModal(true);
   const handleRequestBillClick = () => setShowRequestBillModal(true);
+  const handleHowManyBillsClick = () => setShowHowManyBillsModal(true);
+
+  
 
   const handleCloseModals = () => {
     setShowCallWaiterModal(false);
     setShowRequestBillModal(false);
+    setShowHowManyBillsModal(false);
     // Reset splitBill state when closing modals
+    
+  
   };
+ 
+  const handleNumberOfBillsChange = (event) => {
+    const enteredValue = event.target.value;
+    if (/^[1-9]\d*$/.test(enteredValue) || enteredValue === '') {
+    }
+  };  
 
   const navigate = useNavigate();
 
@@ -59,6 +73,27 @@ function NavigationHeader() {
         </Modal.Body>
       </Modal>
 
+      {/* Modal for How Many Bills */}
+      <Modal show={showHowManyBillsModal} onHide={handleCloseModals}>
+        <Modal.Header closeButton>
+          <Modal.Title>Split Bill</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center">
+          <p style={{ color: 'black' }}>How many bills do you need?</p>
+          <input
+            type="number"
+            className="form-control mb-3"
+            placeholder="Enter number of bills"
+            onChange={handleNumberOfBillsChange}
+          />
+          <div className="d-flex justify-content-center">
+            <Button variant="primary" onClick={handleCallWaiterClick}>
+              Submit
+            </Button>
+          </div>
+        </Modal.Body>
+      </Modal>
+
       {/* Modal for Request Bill */}
       <Modal show={showRequestBillModal} onHide={handleCloseModals}>
         <Modal.Header closeButton>
@@ -67,7 +102,7 @@ function NavigationHeader() {
         <Modal.Body className="text-center">
         <p style={{ color: 'black' }}>Would you want to split the bill?</p>
           <div className="d-flex justify-content-center mb-3">
-            <Button variant="success" onClick={handleCallWaiterClick}>
+            <Button variant="success" onClick={handleHowManyBillsClick}>
               Yes
             </Button>
             <div className="mx-2"></div>
@@ -77,6 +112,8 @@ function NavigationHeader() {
           </div>
         </Modal.Body>
       </Modal>
+
+
     </>
   );
 }
