@@ -7,7 +7,7 @@ import './TablePage.css';
 function TablePage() {
   return (
     <div>
-      <div className="parent">
+      <div className="parentTablePage">
         <div className="button-container">
           <div className="button-column">
             <CircleButton className="occupied" status="Occupied">Table 1</CircleButton>

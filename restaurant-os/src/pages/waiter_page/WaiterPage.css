@@ -1,5 +1,5 @@
 .parent {
-    background: url("/public/background.png"); /* Replace "/public/background.png" with the actual path to your image file */
+    background: #fff5ee; /* Replace "/public/background.png" with the actual path to your image file */
     background-size: cover; /* You can adjust this property based on your image size preferences */
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,10 +8,8 @@
 
 
 /* Centered container */
-.centered-container {
+.order-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh; /* 100% viewport height */
     padding: 2%;
 }
@@ -29,6 +27,7 @@
     max-height: 400px; /* Set a maximum height to create a scrollable container */
     border: 1px solid #ccc;
     overflow-y: scroll; /* Add a vertical scroll bar when content exceeds the max height */
+    margin: 0 auto;
 }
 
 /* Style for each item in the list */

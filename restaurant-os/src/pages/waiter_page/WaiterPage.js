@@ -96,16 +96,13 @@ function WaiterPage() {
     return (
         <div className="parent" >
 
-        <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center', fontWeight: 'bold' }}>Active Orders</h1>
-        <h2 className="tableNumber" style={{ margin: 0, fontSize: '32px', textAlign: 'center', color: 'black' }}> Table 1 Active Orders</h2>
-        
-    
-
+        <h1 style={{ margin: 0, fontSize: '32px', textAlign: 'center', fontWeight: 'bold', background:'#fff5ee' }}>Active Orders</h1>
+        <h2 className="tableNumber" style={{ margin: 0, fontSize: '32px', textAlign: 'center', color: 'black', background:'#fff5ee'}}> Table 1 Active Orders</h2>
         <TopLeftButton />
         <TopRightButton />
  
         <div className="order-container" >
-                <table className="order-preview" style={{ ...customBackgroundStyle2, width: '100%' }}>
+                <table className="order-preview" style={{ ...customBackgroundStyle2, width: '100%', background: 'white'}}>
                     <thead>
                         <tr>
                             <th style={{ width: '10%' }}>Item Number</th>

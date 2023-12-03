@@ -1,7 +1,7 @@
 /* Centered container */
 
 .parent {
-    background: url("/public/background.png"); /* Replace "/public/background.png" with the actual path to your image file */
+    background: #fff5ee; /* Replace "/public/background.png" with the actual path to your image file */
     background-size: cover; /* You can adjust this property based on your image size preferences */
     background-repeat: no-repeat;
     background-attachment: fixed;
