@@ -11,7 +11,7 @@ import { MyContext } from '../../context';
 
 function CartPage() {
     const navigate = useNavigate();
-    const { cartItems, updateCart,removeFromCart } = useContext(MyContext);
+    const { cartItems, updateCart,removeFromCart, clearCart } = useContext(MyContext);
     // Currently hard coded to show cart page
     console.log("Cart items:", cartItems);
     const [servings, setservings] = useState(1);
@@ -43,6 +43,10 @@ function CartPage() {
         )
     );
   };
+
+  const submitOrder = () => {
+    clearCart();
+  }
       
     return (
         <div className="nav_Header">
@@ -67,7 +71,7 @@ function CartPage() {
                         <button className = "btn btn-primary" onClick={() => navigate("/categories")} >Return to Menu</button>
                     </div>
                     <div className="cart-summary">
-                        <button className="btn btn-success">Submit Order</button>
+                        <button className="btn btn-success" onClick={(submitOrder)} >Submit Order</button>
                     </div>
                 </div>
             </div>

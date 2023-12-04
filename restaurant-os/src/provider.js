@@ -37,8 +37,12 @@ export const MyProvider = ({ children }) => {
         setCartItems(cartItems.filter((item) => item.itemName !== itemName));
     };
 
+    const clearCart = () => {
+        setCartItems([]);
+    }
+
     return (
-        <MyContext.Provider value={{ myArray, updateMyArray, cartItems, addToCart, updateCart,removeFromCart }}>
+        <MyContext.Provider value={{ myArray, updateMyArray, cartItems, addToCart, updateCart,removeFromCart, clearCart }}>
             {children}
         </MyContext.Provider>
     );
