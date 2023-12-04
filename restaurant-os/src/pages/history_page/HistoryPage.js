@@ -57,15 +57,9 @@ function WaiterPage() {
     };
 
     const orders = [
-        { id: 1, item: 'Uptown Ramen', quantity: 1, desc: 'Remove pork' },
-        { id: 2, item: 'Salmon Sushi', quantity: 1, desc: '' },
-        { id: 3, item: 'California Roll', quantity: 3, desc: '' },
-        { id: 3, item: 'Rainbow Roll', quantity: 1, desc: '' },
-        { id: 3, item: 'Okonomiyaki', quantity: 4, desc: '' },
-        { id: 3, item: 'Miso Soup', quantity: 5, desc: '' },
-        { id: 3, item: 'Yakitori', quantity: 9, desc: '' },
-        { id: 3, item: 'Udon', quantity: 2, desc: '' },
-        { id: 3, item: 'Takoyaki', quantity: 7, desc: '' },
+        { id: 1, item: 'Hokkaido Ramen', quantity: 1, desc: 'Remove Pork, Double Soft boiled egg' },
+        { id: 2, item: 'Gyoza', quantity: 1, desc: 'Double Extra Filling' },
+        { id: 3, item: 'Coca-Cola', quantity: 1, desc: '' },
 
     ];
     const handleItemClick = (item) => {

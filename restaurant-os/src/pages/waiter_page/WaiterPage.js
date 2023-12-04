@@ -67,19 +67,10 @@ function WaiterPage() {
     };
 
     const [activeOrders, setActiveOrders] = useState([
-        { id: 1, item: 'Uptown Ramen', quantity: 1, desc: 'Remove pork' },
-        { id: 2, item: 'Salmon Sushi', quantity: 1, desc: '' },
-        { id: 3, item: 'California Roll', quantity: 3, desc: '' },
-        { id: 4, item: 'Rainbow Roll', quantity: 3, desc: '' },
-        { id: 5, item: 'Okonomiyaki', quantity: 3, desc: '' },
-        { id: 6, item: 'Miso Soup', quantity: 3, desc: '' },
-        { id: 7, item: 'Mango Rolls', quantity: 3, desc: '' },
-        { id: 8, item: 'Chicken Skewers', quantity: 3, desc: '' },
-        { id: 9, item: 'Tempura Vegetables', quantity: 3, desc: '' },
-        { id: 10, item: 'Fried Rice', quantity: 3, desc: '' },
-        { id: 11, item: 'Spring Rolls', quantity: 3, desc: '' },
-        { id: 12, item: 'Vegetable Rolls', quantity: 3, desc: '' },
-        { id: 13, item: 'Beef Skewers', quantity: 3, desc: '' },
+        { id: 1, item: 'Hokkaido Ramen', quantity: 1, desc: 'Remove Pork, Double Soft boiled egg' },
+        { id: 2, item: 'Gyoza', quantity: 1, desc: 'Double Extra Filling' },
+        { id: 3, item: 'Coca-Cola', quantity: 1, desc: '' },
+
    
 
 
