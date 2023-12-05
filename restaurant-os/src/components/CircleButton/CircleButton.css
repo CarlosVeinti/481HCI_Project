@@ -17,3 +17,7 @@
   .occupied {
     background-color: #e43a27; /* Red color for occupied tables */
   }
+
+  .calling {
+    background-color: #27c4e4;
+  }

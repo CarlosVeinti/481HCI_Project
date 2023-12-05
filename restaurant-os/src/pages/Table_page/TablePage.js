@@ -22,7 +22,7 @@ function TablePage() {
           <div className="button-column">
             <CircleButton className="occupied" status="Occupied">Table 5</CircleButton>
             <CircleButton className="free" status="Free">Table 6</CircleButton>
-            <CircleButton className="free" status="Free">Table 7</CircleButton>
+            <CircleButton className="calling" status="Calling Waiter">Table 7</CircleButton>
             <CircleButton className="free" status="Free">Table 8</CircleButton>
           </div>
 

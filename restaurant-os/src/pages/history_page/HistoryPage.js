@@ -57,7 +57,7 @@ function WaiterPage() {
     };
 
     const orders = [
-        { id: 1, item: 'Hokkaido Ramen', quantity: 1, desc: 'Remove Pork, Double Soft boiled egg' },
+        { id: 1, item: 'Hokkaido Ramen', quantity: 1, desc: 'Remove Pork, Triple Soft boiled egg' },
         { id: 2, item: 'Gyoza', quantity: 1, desc: 'Double Extra Filling' },
         { id: 3, item: 'Coca-Cola', quantity: 1, desc: '' },
 
