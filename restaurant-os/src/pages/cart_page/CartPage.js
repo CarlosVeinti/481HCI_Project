@@ -57,7 +57,7 @@ function CartPage() {
                 {cartItems.map((item) => (
                 <CartItem 
                     key={item.itemName} 
-                    item={item} 
+                    item={item}
                     removeFromCart={LocalremoveFromCart} 
                     increaseQuantity={increaseQuantity}
                     decreaseQuantity={decreaseQuantity}

@@ -4,15 +4,22 @@ import './CartItem.css';
 
 function CartItem({ item, removeFromCart, increaseQuantity, decreaseQuantity }) {
   const { itemName, description, quantity, price, imageSrc, servings } = item;
-  console.log("Item:", item);
-
+  //console.log("Item:", item);
+  console.log("ingredfient selection:", item.ingredientSelections);
   return (
     <div className="cart-item">
       <div className="item-details">
         <img src={imageSrc} alt="Food Item" className="food-image" />
         <div className="item-info">
           <h3>{itemName}</h3>
-          <p>{description}</p>
+          <p>{Object.entries(item.ingredientSelections).map(([ingredient, selection]) => (
+              selection !== 'regular' && (
+                <li key={ingredient}>
+                  <strong>{ingredient}:</strong> {selection}
+                </li>
+              )
+            ))}
+          </p>
           
         </div>
       </div>

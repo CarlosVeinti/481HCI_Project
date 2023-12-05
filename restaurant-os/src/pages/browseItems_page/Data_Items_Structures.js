@@ -9,7 +9,7 @@ const itemData = {
         price: 7.99,
         longDescri: 'Savory Vegetable Gyozas',
         ingredients: [
-          "Extra Filling",
+          "Filling",
         ],
       },
       {

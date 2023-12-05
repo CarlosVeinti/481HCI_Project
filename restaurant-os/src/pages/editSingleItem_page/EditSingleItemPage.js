@@ -31,13 +31,7 @@ function EditSingleItemPage() {
         return acc;
     }, {});
 
-    const [ingredientSelections, setIngredientSelections] = useState({
-        ingredient1: 'regular',
-        ingredient2: 'regular',
-        ingredient3: 'regular',
-        ingredient4: 'regular',
-        ingredient5: 'regular'
-    });
+    const [ingredientSelections, setIngredientSelections] = useState({});
     
     const [servings, setServings] = useState(1);
 
@@ -49,9 +43,9 @@ function EditSingleItemPage() {
     };
     
     // Function to handle selection change
-    const handleSelectionChange = (ingredientId, selection) => {
+    const handleSelectionChange = (ingredient, selection) => {
         setIngredientSelections(prev => {
-            const newState = { ...prev, [ingredientId]: selection };
+            const newState = { ...prev, [ingredient]: selection };
             console.log("Updated selections:", newState);  // Debugging line
             return newState;
         });
@@ -116,7 +110,7 @@ function EditSingleItemPage() {
                             <div className="ingredient-name">{ingredient}</div>
                             <div className="action-buttons">
                                 <IngredientButtonGroup 
-                                    groupId={`ingredient${index + 1}`} // Unique ID for each ingredient
+                                    groupId={`${ingredient}`} // Unique ID for each ingredient
                                     onSelect={handleSelectionChange}
                                 />
                             </div>
