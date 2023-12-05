@@ -47,7 +47,7 @@ function BrowseItemsPage() {
                         <Row key={rowIndex} className="my_bip_row">
                             {row.map((item, colIndex) => (
                                 <Col key={colIndex} className="my_bip_col">
-                                <Link to={`/edit-single-item/${encodeURIComponent(item.itemName)}`}>
+                                
                                     <ItemCard
                                         itemName={item.itemName}
                                         briefDescri={item.briefDescri}
@@ -55,7 +55,7 @@ function BrowseItemsPage() {
                                         price={item.price}
                                         longDescri={item.longDescri}
                                     />
-                                </Link>
+                                
                                 </Col>
                             ))}
                         </Row>

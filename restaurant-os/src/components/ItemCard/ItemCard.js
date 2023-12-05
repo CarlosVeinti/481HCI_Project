@@ -64,8 +64,6 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
       price,
       quantity,
     }));
-
-    // Close the modal after adding to cart
     handleCloseModal();
   };
 
