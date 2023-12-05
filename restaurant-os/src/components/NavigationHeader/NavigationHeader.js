@@ -7,6 +7,7 @@ import Image from 'react-bootstrap/Image';
 import './NavigationHeader.css'; // Import your custom styles
 import { useNavigate } from 'react-router-dom';
 import { FaShoppingCart, FaArrowLeft, FaReceipt } from 'react-icons/fa';
+import { LuConciergeBell } from "react-icons/lu";
 
 function NavigationHeader() {
   const [showCallWaiterModal, setShowCallWaiterModal] = useState(false);
@@ -64,7 +65,7 @@ function NavigationHeader() {
               <span className="customMargin"></span>
             </Navbar.Brand>
             <Button variant="primary" className="navbarButtons" onClick={handleCallWaiterClick}>
-              Call Waiter
+            <LuConciergeBell size={30}/> Call Waiter
             </Button>
             <Button variant="primary" className="navbarButtons" onClick={() => navigate("/cart")}>
               <FaShoppingCart size={30} /> Cart
@@ -77,6 +78,7 @@ function NavigationHeader() {
       <Modal show={showCallWaiterModal} onHide={handleCloseModals}>
         <Modal.Header closeButton>
           <Modal.Title>Call Waiter</Modal.Title>
+      
         </Modal.Header>
         <Modal.Body>
           <p style={{ color: 'black' }}>A waiter will be with you shortly.</p>
