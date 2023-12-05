@@ -53,7 +53,7 @@ function NavigationHeader() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <div className="navbarButtonsContainer">
-            <Button variant="primary" className="navbarButtons" onClick={() => navigate(-1)}>
+            <Button variant="danger" className="navbarButtons" onClick={() => navigate(-1)}>
               <FaArrowLeft size={30} /> Back
             </Button>
             <Button variant="primary" className="navbarButtons" onClick={handleRequestBillClick}>
