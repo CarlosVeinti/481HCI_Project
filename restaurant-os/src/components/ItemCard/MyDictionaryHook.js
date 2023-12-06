@@ -22,7 +22,7 @@ function useMyDictionary() {
   };
 
   useEffect(() => {
-    console.log('Updated allItems:', allItems);
+    //console.log('Updated allItems:', allItems);
   }, [allItems]);
 
   return { allItems, updateServings, calculateTotalItems };

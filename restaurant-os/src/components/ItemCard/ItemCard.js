@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItemToCart, removeItemFromCart } from '../../store/cartActions';
 import MyDictionaryComponent from './MyDictionaryComponent';
+import { BsPlus, BsDash } from 'react-icons/bs';
 
 function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri, allItems, updateServings }) {
   const dispatch = useDispatch();
@@ -56,11 +57,11 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri, allItems
       {showModal ? (
         <div className="d-flex justify-content-center align-items-center quantity-control">
           <Button variant="secondary" onClick={decreaseQuantity} className="quantity-subtract-button">
-            -
+            <BsDash size={20}/>
           </Button>
           <span className="quantity-display">{quantity}</span>
           <Button variant="secondary" onClick={increaseQuantity} className="quantity-add-button">
-            +
+            <BsPlus size={20}/>
           </Button>
         </div>
       ) : (

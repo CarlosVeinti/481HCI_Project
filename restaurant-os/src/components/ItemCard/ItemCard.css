@@ -15,16 +15,20 @@
   
   .quantity-add-button {
     margin: 4px; /* Adjust the margin as needed */
+    width: 80px;
   }
 
 
 .quantity-subtract-button{
     margin: 4px; /* Adjust the margin as needed */
+    width: 80px;
 }
 
   
   .quantity-display {
-    margin: 0 8px; /* Adjust the left and right margin as needed */
+    margin: 0 25px; /* Adjust the left and right margin as needed */
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .foodItemCard {

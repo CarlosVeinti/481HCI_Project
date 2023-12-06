@@ -19,7 +19,7 @@ function MyDictionaryComponent() {
         [itemName]: numberOfServings,
       };
   
-      console.log(`Updated servings for ${itemName}:`, updatedItems[itemName]);
+      //console.log(`Updated servings for ${itemName}:`, updatedItems[itemName]);
   
       return updatedItems;
     });
