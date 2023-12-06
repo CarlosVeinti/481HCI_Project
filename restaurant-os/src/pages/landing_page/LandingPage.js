@@ -7,11 +7,11 @@ function LandingPage() {
     return (
         <>
         <div>
-        <img src="/background.png" alt="Background Image" className='cover-image'></img>
+        <img src= {process.env.PUBLIC_URL +"/background.png"} alt="Background Image" className='cover-image'></img>
         </div>
         <div className="landing-page">
             <div>
-                <img src="/logo.png" alt="Restaurant Logo" className='logo'></img>
+                <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Restaurant Logo" className='logo'></img>
             </div>
             <WelcomeSection />
             <LanguageButton />

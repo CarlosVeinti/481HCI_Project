@@ -68,7 +68,7 @@ function NavigationHeader({allItems, updateServings, calculateTotalItems}) {
               <FaReceipt size={30} /> Request Bill
             </Button>
             <Navbar.Brand className="customNavbarBrand">
-              <Image src="/logo.png" alt="Logo" width="64" height="64" className="customImage" />
+              <Image src= {process.env.PUBLIC_URL + "/logo.png"} alt="Logo" width="64" height="64" className="customImage" />
               <span className="customMargin"></span>
             </Navbar.Brand>
             <Button variant="primary" className="navbarButtons" onClick={handleCallWaiterClick}>

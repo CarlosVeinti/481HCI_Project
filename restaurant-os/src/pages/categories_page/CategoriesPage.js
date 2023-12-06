@@ -17,43 +17,43 @@ const categories = [
   {
     title: 'Appetizers',
     description: 'Start off right.',
-    imageSrc: '/appetizers.jpeg',
+    imageSrc: process.env.PUBLIC_URL + '/appetizers.jpeg',
     linkTo: '/browse-items/appetizers',
   },
   {
     title: 'Sushi',
     description: 'Freshly rolled delicacies.',
-    imageSrc: '/sushi.png',
+    imageSrc: process.env.PUBLIC_URL + '/sushi.png',
     linkTo: '/browse-items/sushi',
   },
   {
     title: 'Sashimi',
     description: 'Sliced raw fish.',
-    imageSrc: '/sashimi.jpeg',
+    imageSrc: process.env.PUBLIC_URL + '/sashimi.jpeg',
     linkTo: '/browse-items/sashimi',
   },
   {
     title: 'Ramen',
     description: 'Slurp-worthy goodness.',
-    imageSrc: '/CreamySpicyMisoRamen.webp',
+    imageSrc: process.env.PUBLIC_URL + '/CreamySpicyMisoRamen.webp',
     linkTo: '/browse-items/ramen',
   },
   {
     title: 'Desserts',
     description: 'Sweet indulgences.',
-    imageSrc: '/desert.png',
+    imageSrc: process.env.PUBLIC_URL + '/desert.png',
     linkTo: '/browse-items/desserts',
   },
   {
     title: 'Beverages',
     description: 'Quench your thirst.',
-    imageSrc: '/drinks.jpeg',
+    imageSrc: process.env.PUBLIC_URL + '/drinks.jpeg',
     linkTo: '/browse-items/beverages',
   },
   {
     title: 'Tempura',
     description: 'Coated in a thin batter and deep fried',
-    imageSrc: '/tempuraCategory.jpeg',
+    imageSrc: process.env.PUBLIC_URL + '/tempuraCategory.jpeg',
     linkTo: '/browse-items/tempura'
   }
 ];
@@ -67,7 +67,7 @@ function CategoriesPage() {
   return (
     <>
       <div>
-        <img src="/background.png" alt="Background Image" className='cover-image'></img>
+        <img src={process.env.PUBLIC_URL +"/background.png"} alt="Background Image" className='cover-image'></img>
       </div>
       <div className="nav_Header">
         <NavigationHeader />

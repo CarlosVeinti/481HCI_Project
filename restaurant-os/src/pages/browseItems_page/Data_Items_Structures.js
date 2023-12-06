@@ -5,7 +5,7 @@ const itemData = {
       {
         itemName: 'Gyoza',
         briefDescri: '5 servings',
-        imageSrc: '/Appetizers/DumplingsGyoza.png',
+        imageSrc: process.env.PUBLIC_URL + '/Appetizers/DumplingsGyoza.png',
         price: 7.99,
         longDescri: 'Savory Vegetable Gyozas',
         ingredients: [
@@ -15,7 +15,7 @@ const itemData = {
       {
         itemName: 'Spring Rolls',
         briefDescri: 'Pork - (3 pieces)',
-        imageSrc: '/Appetizers/SpringRolls.jpg',
+        imageSrc: process.env.PUBLIC_URL + '/Appetizers/SpringRolls.jpg',
         price: 6.99,
         longDescri: 'Savory Pork Spring Rolls',
         ingredients: [
@@ -24,7 +24,7 @@ const itemData = {
       {
         itemName: 'Edamame',
         briefDescri: '200 grams',
-        imageSrc: '/Appetizers/Edamame.jpg',
+        imageSrc: process.env.PUBLIC_URL + '/Appetizers/Edamame.jpg',
         price: 3.99,
         longDescri: 'Fresh Edamame served with Sea salt',
         ingredients: [
@@ -33,7 +33,7 @@ const itemData = {
       {
         itemName: "Hiyayakko",
         briefDescri: "Contains Silken tofu",
-        imageSrc: "/Appetizers/Hiyayakko.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Appetizers/Hiyayakko.jpg",
         price: 5.99,
         longDescri: "Hiyayakko is a delightful and refreshing Japanese dish that effortlessly combines simplicity with incredible flavors. This cold tofu salad is not just a meal; it's a culinary experience that will tantalize your taste buds and leave you craving for more.",
         ingredients: [
@@ -42,7 +42,7 @@ const itemData = {
       {
         itemName: "Salad Rolls",
         briefDescri: "Salad Rolls serving",
-        imageSrc: "/Appetizers/SaladRolls.webp",
+        imageSrc: process.env.PUBLIC_URL + "/Appetizers/SaladRolls.webp",
         price: 8.99,
         longDescri: "Delicate rice paper wrappers enveloping succulent shrimp, complemented by tender rice vermicelli and a garden of aromatic herbs like mint, cilantro, and Thai basil. ",
         ingredients: [
@@ -51,7 +51,7 @@ const itemData = {
       {
         itemName:"Okonomiyaki",
         briefDescri:"Japanese Pancake",
-        imageSrc:"/Appetizers/Okonomiyaki.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Appetizers/Okonomiyaki.jpg",
         price:10.99,
         longDescri:"A batter made with flour, grated yam, and shredded cabbage. Tender slices of pork belly, fresh green onions, and a generous sprinkle of tenkasu (tempura crumbs). The pièce de résistance? Our signature okonomiyaki sauce — a sweet and savory drizzle.",
         ingredients: [
@@ -64,7 +64,7 @@ const itemData = {
       {
         itemName:"California Roll",
         briefDescri:"4 pieces",
-        imageSrc: "/Sushi/californiaRoll.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Sushi/californiaRoll.jpg",
         price: 8.99,
         longDescri: "Avocado, Crab and Cucumber",
         ingredients: [
@@ -73,7 +73,7 @@ const itemData = {
       {
         itemName: "Philadelphia Roll",
         briefDescri: "8 pieces",
-        imageSrc: "/Sushi/philadelphiaroll.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Sushi/philadelphiaroll.jpg",
         price: 17.99,
         longDescri: "Cream Cheese, Salmon, Avocado, Cucumber, Sesame Seeds",
         ingredients: [
@@ -82,7 +82,7 @@ const itemData = {
       {
         itemName: "Dynamite Roll",
         briefDescri: "8 pieces",
-        imageSrc: "/Sushi/dynamiteroll.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Sushi/dynamiteroll.jpg",
         price: 16.99,
         longDescri: "Shrimp tempura, avocado, cucumber",
         ingredients: [
@@ -96,7 +96,7 @@ const itemData = {
       {
         itemName:"Salmon Sashimi",
         briefDescri:"6 pieces",
-        imageSrc: "/Sashimi/SalmonSashimi.webp",
+        imageSrc: process.env.PUBLIC_URL + "/Sashimi/SalmonSashimi.webp",
         price: 18.99,
         longDescri: "Fresh Salmon",
         ingredients: [
@@ -106,7 +106,7 @@ const itemData = {
       {
         itemName:"Tuna Sashimi",
         briefDescri:"4 pieces",
-        imageSrc: "/Sashimi/tunaSashimi.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Sashimi/tunaSashimi.jpg",
         price: 13.99,
         longDescri: "Fresh Tuna",
         ingredients: [
@@ -116,7 +116,7 @@ const itemData = {
       {
         itemName:"Surf Clam Sashimi",
         briefDescri:"8 pieces",
-        imageSrc: "/Sashimi/surfClamSashimi.webp",
+        imageSrc: process.env.PUBLIC_URL + "/Sashimi/surfClamSashimi.webp",
         price: 23.99,
         longDescri: "Fresh Tuna",
         ingredients: [
@@ -132,7 +132,7 @@ const itemData = {
       {
         itemName:"Chicken Ramen",
         briefDescri:"1 Bowl",
-        imageSrc: "/Ramen/chickenRamen.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Ramen/chickenRamen.jpg",
         price: 14.99,
         longDescri: "Flavourful broth, roasted chicken, fresh scallions, noodles, soft cooked egg",
         ingredients: [
@@ -146,7 +146,7 @@ const itemData = {
       {
         itemName:"Hokkaido Ramen",
         briefDescri:"1 Bowl",
-        imageSrc: "/Ramen/hokkaidoRamen.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Ramen/hokkaidoRamen.jpg",
         price: 15.99,
         longDescri: "Miso broth, noodles, pork, butter, corn, egg, scallions",
         ingredients: [
@@ -161,7 +161,7 @@ const itemData = {
       {
         itemName:"Shoyu Ramen",
         briefDescri:"1 Bowl",
-        imageSrc: "/Ramen/shoyuRamen.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Ramen/shoyuRamen.jpg",
         price: 16.49,
         longDescri: "Soy sauce based broth, noodles, bamboo shots, pork, scallions",
         ingredients: [
@@ -181,7 +181,7 @@ const itemData = {
       {
         itemName:"Matcha Cheesecake",
         briefDescri:"Two Pieces",
-        imageSrc: "/Desserts/matchaCake.png",
+        imageSrc: process.env.PUBLIC_URL + "/Desserts/matchaCake.png",
         price: 15.99,
         longDescri: "Light and fluffly with the traditional matcha flavour",
         ingredients: [
@@ -190,7 +190,7 @@ const itemData = {
       {
         itemName:"Mochi Ice Cream",
         briefDescri:"5 Pieces",
-        imageSrc: "/Desserts/mochiIceCream.webp",
+        imageSrc: process.env.PUBLIC_URL + "/Desserts/mochiIceCream.webp",
         price: 19.99,
         longDescri: "Soft chewy out layer of glutinous rice, filled with ice cream",
         ingredients: [
@@ -199,7 +199,7 @@ const itemData = {
       {
         itemName:"Dorayaki",
         briefDescri:"3 Pieces",
-        imageSrc: "/Desserts/Dorayaki.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Desserts/Dorayaki.jpg",
         price: 18.00,
         longDescri: " Sweet adzuki bean paste sandwiched between soft honey pancakes",
         ingredients: [
@@ -211,7 +211,7 @@ const itemData = {
       {
         itemName:"Sapporo Beer",
         briefDescri:"1 Bottle",
-        imageSrc: "/Beverages/sapporoBeerBottle.webp",
+        imageSrc: process.env.PUBLIC_URL + "/Beverages/sapporoBeerBottle.webp",
         price: 3.49,
         longDescri: "Taste of Malt, cereal, herbs, hops, honey, apple",
         ingredients: [
@@ -220,7 +220,7 @@ const itemData = {
       {
         itemName:"Coca-Cola",
         briefDescri:"1 Bottle",
-        imageSrc: "/Beverages/cocaColaBottle.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Beverages/cocaColaBottle.jpg",
         price: 2.99,
         longDescri: "Original Coca-Cola",
         ingredients: [
@@ -229,7 +229,7 @@ const itemData = {
       {
         itemName:"Green Tea",
         briefDescri:"1 Tea Pot",
-        imageSrc: "/Beverages/GreenTeaPot.webp",
+        imageSrc: process.env.PUBLIC_URL + "/Beverages/GreenTeaPot.webp",
         price: 11.99,
         longDescri: "64 oz serving",
         ingredients: [
@@ -242,7 +242,7 @@ const itemData = {
       {
         itemName: "Shrimp Tempura",
         briefDescri: "6 pieces",
-        imageSrc: "/Tempura/ShrimpTempura.png",
+        imageSrc: process.env.PUBLIC_URL + "/Tempura/ShrimpTempura.png",
         price: 12.99,
         longDescri: "Battered and deep fried",
         ingredients: [
@@ -251,7 +251,7 @@ const itemData = {
       {
         itemName: "Eggplant Tempura",
         briefDescri: "8 pieces",
-        imageSrc: "/Tempura/eggplant_Tempura.webp",
+        imageSrc: process.env.PUBLIC_URL + "/Tempura/eggplant_Tempura.webp",
         price: 16.00,
         longDescri: "Battered and deep fried",
         ingredients: [
@@ -260,7 +260,7 @@ const itemData = {
       {
         itemName: "Sweet Potato Tempura",
         briefDescri: "6 pieces",
-        imageSrc: "/Tempura/sweetPotato_Tempura.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Tempura/sweetPotato_Tempura.jpg",
         price: 10.00,
         longDescri: "Battered and deep fried",
         ingredients: [
@@ -273,7 +273,7 @@ const itemData = {
       {
         itemName:"Hiyayakko",
         briefDescri:"1 Serving",
-        imageSrc: "/FamousDishes/tofuV1.webp",
+        imageSrc: process.env.PUBLIC_URL + "/FamousDishes/tofuV1.webp",
         price: 8.99,
         longDescri: "Soy milk coagulated",
         ingredients: [

@@ -35,7 +35,7 @@ function BrowseItemsPage() {
     return (
         <>
         <div>
-            <img src="/background.png" alt="Background Image" className='cover-image'></img>
+            <img src={process.env.PUBLIC_URL +"/background.png"} alt="Background Image" className='cover-image'></img>
         </div>
 
         <NavigationHeader allItems={allItems} updateServings= {updateServings} calculateTotalItems = {calculateTotalItems}/>
