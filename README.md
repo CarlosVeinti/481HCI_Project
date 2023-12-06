@@ -3,9 +3,11 @@ Project for CPSC 481
 
 Software Requirements to run this application:
 Node: https://nodejs.org/en
+
 npm (or some other JavaScript package manager like yarn)
 
 Once you download or clone the code for this application and have the required software installed on your computer. Navigate to the restaurant-os directory where you cloned this repository. Then open a terminal and inside that terminal, type the following commands:
+
 npm install (This will intall all external packages or libraries required for this application to properly run)
 
 Once all packages are downloaded and installed. Type the following command (on the same directory) to start running the application:
