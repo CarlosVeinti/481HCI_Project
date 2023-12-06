@@ -1,5 +1,5 @@
 {
-  "homepage": "http://CarlosVeinti.github.io/481HCI_Project",
+  "homepage": "https://CarlosVeinti.github.io/481HCI_Project",
   "name": "restaurant-os",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run buil",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
