@@ -26,12 +26,12 @@ p {
 }
 
 .menuButton {
-    padding-top: 20%;
+    padding-top: 20% 20%;
 }
 
 
 
 .custom-button {
     font-size: 2.5rem;
-    padding: 24px;
+    padding: 5% 5%;
 };
