@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/481HCI_Project/static/css/main.eb0c6a10.css",
+    "main.js": "/481HCI_Project/static/js/main.f15c8349.js",
+    "static/media/background.png": "/481HCI_Project/static/media/background.46344c3fe1ba5089e1a3.png",
+    "index.html": "/481HCI_Project/index.html",
+    "main.eb0c6a10.css.map": "/481HCI_Project/static/css/main.eb0c6a10.css.map",
+    "main.f15c8349.js.map": "/481HCI_Project/static/js/main.f15c8349.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb0c6a10.css",
+    "static/js/main.f15c8349.js"
+  ]
+}
