@@ -10,6 +10,7 @@ import { Container } from 'react-bootstrap';
 import itemData from './Data_Items_Structures';
 import { useLocation } from 'react-router-dom'; // Import useLocation
 import { Link } from 'react-router-dom';
+import MyDictionaryComponent from '../../components/ItemCard/MyDictionaryComponent';
 
 const customBackgroundStyle = {
     backgroundColor: '#fff5ee', // Replace with your desired background color
@@ -19,6 +20,9 @@ function BrowseItemsPage() {
     
     const location = useLocation(); // Use useLocation to get the current URL
     const category = location.pathname.split('/')[2]; // Extract the category from the URL
+
+    const { allItems, updateServings, calculateTotalItems } = MyDictionaryComponent();
+    const totalCartItems = calculateTotalItems();
 
     const items = itemData[category];
     const itemsPerRow = 3;
@@ -34,7 +38,7 @@ function BrowseItemsPage() {
             <img src="/background.png" alt="Background Image" className='cover-image'></img>
         </div>
 
-        <NavigationHeader/>
+        <NavigationHeader allItems={allItems} updateServings= {updateServings} calculateTotalItems = {calculateTotalItems}/>
         <CategoriesSideBar currentCategory={category}/>     
         <div className="browseItemsClass">
                    
@@ -49,11 +53,14 @@ function BrowseItemsPage() {
                                 <Col key={colIndex} className="my_bip_col">
                                 
                                     <ItemCard
+                                        key={item.itemName}
                                         itemName={item.itemName}
                                         briefDescri={item.briefDescri}
                                         imageSrc={item.imageSrc}
                                         price={item.price}
                                         longDescri={item.longDescri}
+                                        allItems={allItems}
+                                        updateServings={updateServings}
                                     />
                                 
                                 </Col>
