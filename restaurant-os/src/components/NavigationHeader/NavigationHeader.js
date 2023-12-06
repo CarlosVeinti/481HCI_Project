@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -8,8 +8,12 @@ import './NavigationHeader.css'; // Import your custom styles
 import { useNavigate } from 'react-router-dom';
 import { FaShoppingCart, FaArrowLeft, FaReceipt } from 'react-icons/fa';
 import { LuConciergeBell } from "react-icons/lu";
+import MyDictionaryComponent from '../ItemCard/MyDictionaryComponent';
+import useMyDictionary from '../ItemCard/MyDictionaryHook';
 
-function NavigationHeader() {
+function NavigationHeader({allItems, updateServings, calculateTotalItems}) {
+
+
   const [showCallWaiterModal, setShowCallWaiterModal] = useState(false);
   const [showRequestBillModal, setShowRequestBillModal] = useState(false);
   const [showHowManyBillsModal, setShowHowManyBillsModal] = useState(false);
@@ -48,6 +52,9 @@ function NavigationHeader() {
 
   const navigate = useNavigate();
 
+ 
+
+
   return (
     <>
       <Navbar className="customNavbar">
@@ -68,7 +75,9 @@ function NavigationHeader() {
             <LuConciergeBell size={30}/> Call Waiter
             </Button>
             <Button variant="primary" className="navbarButtons" onClick={() => navigate("/cart")}>
-              <FaShoppingCart size={30} /> Cart
+            <FaShoppingCart size={30} /> Cart (
+              {allItems ? Object.values(allItems).reduce((acc, curr) => acc + curr, 0) : 0}
+              )
             </Button>
           </div>
         </Navbar.Collapse>

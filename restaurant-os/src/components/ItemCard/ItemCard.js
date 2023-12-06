@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
@@ -9,16 +9,14 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItemToCart, removeItemFromCart } from '../../store/cartActions';
+import MyDictionaryComponent from './MyDictionaryComponent';
 
-
-function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
-
+function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri, allItems, updateServings }) {
   const dispatch = useDispatch();
-
-
-
   const [showModal, setShowModal] = useState(false);
-  const [quantity, setQuantity] = useState(0);
+
+  
+  const quantity = allItems[itemName] || 0;
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -27,33 +25,19 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
     handleShowModal();
     increaseQuantity();
   };
-  
-  
+
   const increaseQuantity = () => {
-    setQuantity(quantity + 1);
-    // for redux
-    dispatch(addItemToCart({
-      itemName,
-      price,
-      quantity: quantity + 1,
-    }));
+    const newQuantity = quantity + 1;
+    updateServings(itemName, newQuantity);
   };
 
   const decreaseQuantity = () => {
     if (quantity > 0) {
-      setQuantity(quantity - 1);
-
-    if (quantity - 1 === 0) {
+      const newQuantity = quantity - 1;
+      if (newQuantity === 0) {
         handleCloseModal();
-    }
-      
-      // Dispatch removeItemFromCart action
-      // for redux
-      dispatch(removeItemFromCart({
-        itemName,
-        price,
-        quantity: quantity - 1,
-      }));
+      }
+      updateServings(itemName, newQuantity);
     }
   };
 
@@ -67,20 +51,18 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
     handleCloseModal();
   };
 
-
-
   return (
     <Card className='foodItemCard'>
       {showModal ? (
         <div className="d-flex justify-content-center align-items-center quantity-control">
-        <Button variant="secondary" onClick={decreaseQuantity} className="quantity-subtract-button">
-          -
-        </Button>
-        <span className="quantity-display">{quantity}</span>
-        <Button variant="secondary" onClick={increaseQuantity} className="quantity-add-button">
-          +
-        </Button>
-      </div>
+          <Button variant="secondary" onClick={decreaseQuantity} className="quantity-subtract-button">
+            -
+          </Button>
+          <span className="quantity-display">{quantity}</span>
+          <Button variant="secondary" onClick={increaseQuantity} className="quantity-add-button">
+            +
+          </Button>
+        </div>
       ) : (
         <Button variant="primary" className="addIcon" onClick={handleButtonClick}>
           <MdAddCircleOutline />
@@ -105,9 +87,7 @@ function ItemCard({ itemName, briefDescri, imageSrc, price, longDescri }) {
                 More Details
               </Button>
             </Link>
-            
           </Col>
-          
           <Col md={4} className="price-col">
             <Card.Text style={{ color: 'green', fontFamily: "'Playpen Sans', sans-serif", fontSize: '1.2rem', fontWeight: 'bold' }}>
               {price ? `$${price.toFixed(2)}` : 'Price: N/A'}
