@@ -190,7 +190,7 @@ const itemData = {
       {
         itemName:"Mochi Ice Cream",
         briefDescri:"5 Pieces",
-        imageSrc: process.env.PUBLIC_URL + "/Desserts/mochiIceCream.webp",
+        imageSrc: process.env.PUBLIC_URL + "/Desserts/MochiIceCream.webp",
         price: 19.99,
         longDescri: "Soft chewy out layer of glutinous rice, filled with ice cream",
         ingredients: [
