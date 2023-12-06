@@ -14,9 +14,11 @@ function LandingPage() {
                 <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Restaurant Logo" className='logo'></img>
             </div>
             <WelcomeSection />
-            <LanguageButton />
         </div>
+        
+        <LanguageButton />
         </>
+
     );
 }
 
